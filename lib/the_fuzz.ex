@@ -1,0 +1,2 @@
+defmodule TheFuzz do
+end
