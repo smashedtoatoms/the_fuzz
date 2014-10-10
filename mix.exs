@@ -3,8 +3,13 @@ defmodule TheFuzz.Mixfile do
 
   def project do
     [app: :the_fuzz,
-     version: "0.0.1",
+     version: "0.1.0",
      elixir: "~> 1.0.0",
+     name: "TheFuzz",
+     source_url: "https://github.com/smashedtoatoms/the_fuzz",
+     homepage_url: "https://github.com/smashedtoatoms/the_fuzz",
+     description: description,
+     package: package,
      deps: deps]
   end
 
@@ -28,6 +33,28 @@ defmodule TheFuzz.Mixfile do
     [
       {:earmark, "~> 0.1", only: :dev},
       {:ex_doc, "~> 0.6", only: :dev}
+    ]
+  end
+
+  defp description do
+    """
+    String metrics and phonetic algorithms for Elixir (e.g. Dice/Sorensen, 
+    Hamming, Jaccard, Jaro, Jaro-Winkler, Levenshtein, Metaphone, N-Gram, 
+    NYSIIS, Overlap, Ratcliff/Obershelp, Refined NYSIIS, Refined Soundex, 
+    Soundex, Weighted Levenshtein).  Based Heavily on StringMetrics for Scala
+    written by Rocky Madden.
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      contributors: ["Jason Legler"],
+      licenses: ["Apache 2.0"],
+      links: %{
+        "GitHub" => "https://github.com/smashedtoatoms/the_fuzz",
+        "Docs" => "https://smashedtoatoms.github.io/the_fuzz"
+      }
     ]
   end
 end
