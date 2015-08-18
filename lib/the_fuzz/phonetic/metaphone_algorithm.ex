@@ -20,7 +20,7 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
     cond do
       len(value) == 0 -> nil
       !is_alphabetic?(value) -> nil
-      true -> value 
+      true -> value
         |> downcase
         |> transcode_first_character
         |> deduplicate
@@ -35,25 +35,25 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
   # Transcodes the first character of the string using the Metaphone algorithm.
   defp transcode_first_character(value) do
     case len(value) do
-      0 -> 
+      0 ->
         value
-      1 -> 
-        cond do 
+      1 ->
+        cond do
           first(value) == "x" -> "s"
-          true -> value 
+          true -> value
         end
-      _ -> 
+      _ ->
         t = elem(split_at(value, 1), 1)
         case first(value) do
-          "a" -> 
-            cond do 
-              first(t) == "e" -> t 
-              true -> value 
+          "a" ->
+            cond do
+              first(t) == "e" -> t
+              true -> value
             end
-          x when x in ["g", "k", "p"] -> 
-            cond do 
-              first(t) == "n" -> t 
-              true -> value 
+          x when x in ["g", "k", "p"] ->
+            cond do
+              first(t) == "n" -> t
+              true -> value
             end
           "w" ->
             cond do
@@ -61,21 +61,21 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
               first(t) == "h" -> "w" <> elem(split_at(value, 2), 1)
               true -> value
             end
-          "x" -> 
+          "x" ->
             "s" <> t
-          _ -> 
+          _ ->
             value
         end
     end
   end
 
   # Transcodes the rest of the string using the Metaphone algorithm.
-  # 
+  #
   # Note:
-  # I used very short variable names to aid in readability.  Normally I have a 
-  # low tolerance for short meaningless variable names; however, in this case, 
+  # I used very short variable names to aid in readability.  Normally I have a
+  # low tolerance for short meaningless variable names; however, in this case,
   # the lines got very long, or had to be broken up in very hard-to-read ways.
-  # I opted to use very short variable names.  I apologize if it hurts 
+  # I opted to use very short variable names.  I apologize if it hurts
   # readability.
   #
   # p = processed values
@@ -94,7 +94,7 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
   defp transcode(p, c, r, o) do
     vowels = ["a", "e", "i", "o", "u"]
 
-    # partially applied function for shifting because Elixir doesn't allow 
+    # partially applied function for shifting because Elixir doesn't allow
     # me to nest defs.
     shift = fn(count, characters) ->
       {head, tail} = split_at(r, count-1)
@@ -105,14 +105,14 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
     end
 
     {updated_p, updated_c, updated_r, updated_o} = case c do
-      x when x in ["a", "e", "i", "o", "u"] -> 
+      x when x in ["a", "e", "i", "o", "u"] ->
         case len(p) == 0 do
           false -> shift.(1, o)
           true -> shift.(1, o <> c)
         end
-      x when x in ["f", "j", "l", "m", "n", "r"] -> 
+      x when x in ["f", "j", "l", "m", "n", "r"] ->
         shift.(1, o <> c)
-      "b" -> 
+      "b" ->
         cond do
           len(p) >= 1 && last(p) == "m" && len(r) == 0 -> shift.(1, o)
           true -> shift.(1, o <> "b")
@@ -121,13 +121,13 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
         cond do
           len(r) >= 1 && first(r) == "h" && len(p) >= 1 && last(p) == "s" ->
             shift.(1, o <> "k")
-          len(r) >= 2 && first(r) == "i" && at(r, 1) == "a" -> 
+          len(r) >= 2 && first(r) == "i" && at(r, 1) == "a" ->
             shift.(3, o <> "x")
           len(r) >= 1 && first(r) == "h" ->
             shift.(2, o <> "x")
           len(p) >= 1 && len(r) >= 1 && last(p) == "s" && first(r) == "h" ->
             shift.(2, o <> "x")
-          len(p) >= 1 && len(r) >= 1 && last(p) == "s" 
+          len(p) >= 1 && len(r) >= 1 && last(p) == "s"
               && first(r) in ["i", "e", "y"] ->
             shift.(1, o)
           len(r) >= 1 && first(r) in ["i", "e", "y"] ->
@@ -136,7 +136,7 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
             shift.(1, o <> "k")
         end
       "d" ->
-        cond do 
+        cond do
           len(r) >= 2 && first(r) == "g" && at(r, 1) in ["e", "y", "i"] ->
             shift.(1, o <> "j")
           true ->
@@ -144,22 +144,22 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
         end
       "g" ->
         cond do
-          len(r) > 1 && first(r) == "h" 
-              || len(r) == 1 && first(r) == "n" 
+          len(r) > 1 && first(r) == "h"
+              || len(r) == 1 && first(r) == "n"
               || len(r) == 3 && first(r) == "n" && at(r, 2) == "d" ->
             shift.(1, o)
           len(r) >= 1 && first(r) in ["i", "e", "y"] ->
             shift.(2, o <> "j")
-          true -> 
+          true ->
             shift.(1, o <> "k")
         end
       "h" ->
         cond do
-          (len(p) >= 1 && last(p) in vowels && (len(r) == 0 || first(r) in 
-              vowels)) || len(p) >= 2 && last(p) == "h" && 
+          (len(p) >= 1 && last(p) in vowels && (len(r) == 0 || first(r) in
+              vowels)) || len(p) >= 2 && last(p) == "h" &&
               (at(p, len(p)-2)) == "t" || at(p, len(p) - 2) == "g" ->
             shift.(1, o)
-          true -> 
+          true ->
             shift.(1, o <> "h")
         end
       "k" ->
@@ -172,7 +172,7 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
           len(r) >= 1 && first(r) == "h" -> shift.(2, o <> "f")
           true -> shift.(1, o <> "p")
         end
-      "q" -> 
+      "q" ->
         shift.(1, o <> "k")
       "s" ->
         cond do
@@ -202,11 +202,11 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
           true ->
             shift.(1, o <> c)
         end
-      "x" -> 
+      "x" ->
         shift.(1, o <> "ks")
-      "z" -> 
+      "z" ->
         shift.(1, o <> "s")
-      true -> 
+      true ->
         shift.(1, o)
     end
     transcode(updated_p, updated_c, updated_r, updated_o)

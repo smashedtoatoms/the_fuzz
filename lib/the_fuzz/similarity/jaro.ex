@@ -3,6 +3,7 @@ defmodule TheFuzz.Similarity.Jaro do
   Calculates the [Jaro Distance](http://en.wikipedia.org/wiki/
   Jaro-Winkler_distance) between two strings.
   """
+  @behaviour TheFuzz.StringMetric
 
   @doc """
   Calculates the Jaro distance between two strings.
@@ -23,7 +24,7 @@ defmodule TheFuzz.Similarity.Jaro do
       string1_length == 0 or string2_length == 0 -> nil
       string1 == string2 -> 1.0
       string1_length > string2_length -> match(string2, string1)
-      true -> match(string1, string2) 
+      true -> match(string1, string2)
     end
   end
 
@@ -31,7 +32,7 @@ defmodule TheFuzz.Similarity.Jaro do
   ## Helper Functions
   ############################################################################
 
-  # Iterates through the first string and finds common characters (com) and 
+  # Iterates through the first string and finds common characters (com) and
   # transpositions (trans).
   defp match(s1, s2) do
     max = div(String.length(s2), 2)
@@ -48,10 +49,10 @@ defmodule TheFuzz.Similarity.Jaro do
   end
   defp match(s1, s2, _, com, trans, _, _) do
     cond do
-      com == 0 -> 
+      com == 0 ->
         0.0
       true ->
-        (((com / String.length(s1)) + (com / String.length(s2)) + 
+        (((com / String.length(s1)) + (com / String.length(s2)) +
           ((com - trans) / com)) / 3.0)
     end
   end

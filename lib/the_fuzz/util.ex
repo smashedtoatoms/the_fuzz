@@ -34,7 +34,7 @@ defmodule TheFuzz.Util do
   def deduplicate(value) do
     cond do
       String.length(value) <= 1 -> value
-      true -> 
+      true ->
         (String.codepoints(value)
           |> Stream.chunk(2, 1)
           |> Stream.filter(&(hd(&1) == "c" || hd(&1) != hd(tl(&1))))
@@ -60,15 +60,15 @@ defmodule TheFuzz.Util do
   defp intersect(_, _, s1, s2, acc) when s1 == 0 or s2 == 0, do: acc
   defp intersect(l1, l2, s1, s2, acc) do
     cond do
-      hd(l1) == hd(l2) -> 
+      hd(l1) == hd(l2) ->
         intersect(tl(l1), tl(l2), s1 - 1, s2 - 1, acc ++ [hd(l2)])
-      Enum.find_index(l1, &(&1 == hd(l2))) == nil -> 
+      Enum.find_index(l1, &(&1 == hd(l2))) == nil ->
         intersect(l1, tl(l2), s1, s2 - 1, acc)
-      true -> 
+      true ->
         cond do
-          max(s1, s2) == s1 -> 
+          max(s1, s2) == s1 ->
             intersect(tl(l1), l2, s1 - 1, s2, acc)
-          true -> 
+          true ->
             intersect(l1, tl(l2), s1, s2 - 1, acc)
         end
     end
@@ -78,8 +78,8 @@ defmodule TheFuzz.Util do
   [ngram tokenizes](http://en.wikipedia.org/wiki/N-gram) the string provided.
   ## Example
       iex> TheFuzz.Util.ngram_tokenize("abcdefghijklmnopqrstuvwxyz", 2)
-      ["ab", "bc", "cd", "de", "ef", "fg", "gh", "hi", "ij", "jk", "kl", "lm", 
-      "mn", "no", "op", "pq", "qr", "rs", "st", "tu", "uv", "vw", "wx", "xy", 
+      ["ab", "bc", "cd", "de", "ef", "fg", "gh", "hi", "ij", "jk", "kl", "lm",
+      "mn", "no", "op", "pq", "qr", "rs", "st", "tu", "uv", "vw", "wx", "xy",
       "yz"]
   """
   def ngram_tokenize(string, n) when is_binary(string) do
@@ -90,5 +90,5 @@ defmodule TheFuzz.Util do
       true -> nil
       false -> Stream.chunk(characters, n, 1) |> Enum.map(&(to_string(&1)))
     end
-  end  
+  end
 end
