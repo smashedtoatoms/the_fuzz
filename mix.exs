@@ -3,7 +3,7 @@ defmodule TheFuzz.Mixfile do
 
   def project do
     [app: :the_fuzz,
-     version: "0.1.0",
+     version: "0.2.0",
      elixir: "~> 1.0.0",
      name: "TheFuzz",
      source_url: "https://github.com/smashedtoatoms/the_fuzz",
@@ -32,7 +32,8 @@ defmodule TheFuzz.Mixfile do
   defp deps do
     [
       {:earmark, "~> 0.1", only: :dev},
-      {:ex_doc, "~> 0.6", only: :dev}
+      {:ex_doc, "~> 0.6", only: :dev},
+      {:dogma, "~> 0.0", only: :dev}
     ]
   end
 

@@ -7,8 +7,15 @@ TheFuzz is a collection of metrics and phonetic (fuzzy string matching) algorith
 
 The following algorithms are currently implemented.
 
+1. DiceSorensenMetric
+1. HammingDistance
+1. JaccardSimilarityMetric
+1. JaroMetric
 1. JaroWinklerMetric
+1. LevenshteinDistance
+1. NGramSimilarityMetric
 1. OverlapMetric
+1. WeightedLevenshteinDistance
 1. MetaphoneAlgorithm
 
 I implemented these ones first because I needed them for another project.  I will be adding more as time progresses.  If you need one of them for a project, and I haven't implemented it yet, please let me know so that I can give it a higher priority.

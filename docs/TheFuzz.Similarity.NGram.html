@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-        <title>TheFuzz.Similarity.Jaro – TheFuzz v0.1.0</title>
+        <title>TheFuzz.Similarity.NGram – TheFuzz v0.1.0</title>
       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc">
@@ -74,11 +74,11 @@
         <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
           <span class="glyphicon glyphicon-menu-hamburger"></span>
         </button>
-        TheFuzz v0.1.0 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="TheFuzz.html#content">TheFuzz</a> &rarr; Similarity &rarr; <a href="TheFuzz.Similarity.Jaro.html#content">Jaro</a>
+        TheFuzz v0.1.0 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="TheFuzz.html#content">TheFuzz</a> &rarr; Similarity &rarr; <a href="TheFuzz.Similarity.NGram.html#content">NGram</a>
       </div>
 
       <h1>
-        TheFuzz.Similarity.Jaro
+        TheFuzz.Similarity.NGram
         
       </h1>
 
@@ -96,14 +96,15 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>Calculates the <a href="http://en.wikipedia.org/wiki/
-Jaro-Winkler_distance">Jaro Distance</a> between two strings.</p>
+          <p>This module contains functions to calculate the ngram distance between two 
+given strings based on this 
+<a href="webdocs.cs.ualberta.ca/~kondrak/papers/spire05.pdf">paper</a></p>
 
         </section>
       
 
       
-        <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/jaro.ex#L1" class="view_source">Source</a>
+        <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/n_gram.ex#L1" class="view_source">Source</a>
       
 
       
@@ -111,17 +112,15 @@ Jaro-Winkler_distance">Jaro Distance</a> between two strings.</p>
           <h1>Summary</h1>
           <table class="summary">
             <tr>
-  <td class="summary_signature"><a href="#compare/2">compare(string1, string2)</a></td>
-  <td class="summary_synopsis"><p>Calculates the Jaro distance between two strings.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;abc&quot;, &quot;&quot;)
-nil
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;abc&quot;, &quot;xyz&quot;)
-0.0
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;compare me&quot;, &quot;compare me&quot;)
-1.0
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;natural&quot;, &quot;nothing&quot;)
-0.5238095238095238</code></pre>
+  <td class="summary_signature"><a href="#compare/2">compare(a, b)</a></td>
+  <td class="summary_synopsis"><p>Calculates the ngram similarity between two given strings with a default 
+ngram size of 2</p>
+</td>
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#compare/3">compare(a, b, ngram_size)</a></td>
+  <td class="summary_synopsis"><p>Calculates the ngram similarity between two given strings with a specified 
+ngram size</p>
 </td>
 </tr>
 
@@ -136,7 +135,7 @@ iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;natural&quot;, &quot;nothing&quot;
           <h1>Functions</h1>
           <section class="detail">
   <div class="detail_header" id="compare/2">
-    <span class="signature"><strong>compare(string1, string2)</strong></span>
+    <span class="signature"><strong>compare(a, b)</strong></span>
     <div class="detail_header_links">
       <span class="detail_type">(function)</span>
       <a href="#compare/2" class="detail_link" title="Link to this function">#</a>
@@ -145,20 +144,41 @@ iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;natural&quot;, &quot;nothing&quot;
   </div>
   
   <section class="docstring">
-    <p>Calculates the Jaro distance between two strings.</p>
+    <p>Calculates the ngram similarity between two given strings with a default 
+ngram size of 2</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;abc&quot;, &quot;&quot;)
-nil
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;abc&quot;, &quot;xyz&quot;)
-0.0
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;compare me&quot;, &quot;compare me&quot;)
-1.0
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;natural&quot;, &quot;nothing&quot;)
-0.5238095238095238</code></pre>
+<pre><code class="iex elixir">iex&gt; TheFuzz.Similarity.NGram.compare(&quot;context&quot;, &quot;contact&quot;)
+0.5
+iex&gt; TheFuzz.Similarity.NGram.compare(&quot;ht&quot;, &quot;nacht&quot;)
+0.25</code></pre>
 
   </section>
   
-    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/jaro.ex#L20" class="view_source">Source</a>
+    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/n_gram.ex#L23" class="view_source">Source</a>
+  
+</section>
+<section class="detail">
+  <div class="detail_header" id="compare/3">
+    <span class="signature"><strong>compare(a, b, ngram_size)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#compare/3" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <section class="docstring">
+    <p>Calculates the ngram similarity between two given strings with a specified 
+ngram size</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; TheFuzz.Similarity.NGram.compare(&quot;night&quot;, &quot;naght&quot;, 3)
+0.3333333333333333
+iex&gt; TheFuzz.Similarity.NGram.compare(&quot;context&quot;, &quot;contact&quot;, 1)
+0.7142857142857143</code></pre>
+
+  </section>
+  
+    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/n_gram.ex#L37" class="view_source">Source</a>
   
 </section>
 

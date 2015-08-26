@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-        <title>TheFuzz.Similarity.Jaro – TheFuzz v0.1.0</title>
+        <title>TheFuzz.StringMetric – TheFuzz v0.1.0</title>
       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc">
@@ -74,99 +74,75 @@
         <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
           <span class="glyphicon glyphicon-menu-hamburger"></span>
         </button>
-        TheFuzz v0.1.0 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="TheFuzz.html#content">TheFuzz</a> &rarr; Similarity &rarr; <a href="TheFuzz.Similarity.Jaro.html#content">Jaro</a>
+        TheFuzz v0.1.0 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="TheFuzz.html#content">TheFuzz</a> &rarr; <a href="TheFuzz.StringMetric.html#content">StringMetric</a>
       </div>
 
       <h1>
-        TheFuzz.Similarity.Jaro
+        TheFuzz.StringMetric
+        
+          <small>behaviour</small>
         
       </h1>
 
       <ul class="summary_links">
         
-          <li><a href="#summary_details">Summary</a></li>
         
         
         
-          <li><a href="#functions_details">Functions</a></li>
         
-        
+          <li><a href="#callbacks_details">Callbacks</a></li>
         
       </ul>
 
       
         <section id="moduledoc" class="docstring">
-          <p>Calculates the <a href="http://en.wikipedia.org/wiki/
-Jaro-Winkler_distance">Jaro Distance</a> between two strings.</p>
+          <p>Specifies the string metric api which an module needs to implement to provide 
+string comparison methods</p>
 
         </section>
       
 
       
-        <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/jaro.ex#L1" class="view_source">Source</a>
-      
-
-      
-        <section id="summary_details" class="details_list">
-          <h1>Summary</h1>
-          <table class="summary">
-            <tr>
-  <td class="summary_signature"><a href="#compare/2">compare(string1, string2)</a></td>
-  <td class="summary_synopsis"><p>Calculates the Jaro distance between two strings.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;abc&quot;, &quot;&quot;)
-nil
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;abc&quot;, &quot;xyz&quot;)
-0.0
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;compare me&quot;, &quot;compare me&quot;)
-1.0
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;natural&quot;, &quot;nothing&quot;)
-0.5238095238095238</code></pre>
-</td>
-</tr>
-
-          </table>
-        </section>
+        <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/string_metric.ex#L1" class="view_source">Source</a>
       
 
       
 
       
-        <section id="functions_details" class="details_list">
-          <h1>Functions</h1>
+
+      
+
+      
+
+      
+        <section id="callbacks_details" class="details_list">
+          <h1>Callbacks</h1>
           <section class="detail">
-  <div class="detail_header" id="compare/2">
-    <span class="signature"><strong>compare(string1, string2)</strong></span>
+  <div class="detail_header" id="c:compare/2">
+    <span class="signature"><strong>compare/2</strong></span>
     <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#compare/2" class="detail_link" title="Link to this function">#</a>
+      <span class="detail_type">(callback)</span>
+      <a href="#c:compare/2" class="detail_link" title="Link to this callback">#</a>
       <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
     </div>
   </div>
   
+    <p>Specs:</p>
+    <ul class="spec">
+      
+        <li>compare(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: any</li>
+      
+    </ul>
+  
   <section class="docstring">
-    <p>Calculates the Jaro distance between two strings.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;abc&quot;, &quot;&quot;)
-nil
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;abc&quot;, &quot;xyz&quot;)
-0.0
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;compare me&quot;, &quot;compare me&quot;)
-1.0
-iex&gt; TheFuzz.Similarity.Jaro.compare(&quot;natural&quot;, &quot;nothing&quot;)
-0.5238095238095238</code></pre>
-
+    
   </section>
   
-    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/jaro.ex#L20" class="view_source">Source</a>
+    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/string_metric.ex#L8" class="view_source">Source</a>
   
 </section>
 
         </section>
-      
-
-      
-
       
       </section> <!--/content -->
 </div><!--/row -->

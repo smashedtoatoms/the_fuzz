@@ -18,9 +18,9 @@ defmodule TheFuzz.Phonetic.MetaphoneMetric do
       false
   """
   def compare(a, b) do
-    case len(a) == 0 || !is_alphabetic?(first(a)) || 
+    case len(a) == 0 || !is_alphabetic?(first(a)) ||
         len(b) == 0 || !is_alphabetic?(first(b)) do
-      false -> 
+      false ->
         compute(a) == compute(b)
       true ->
         nil

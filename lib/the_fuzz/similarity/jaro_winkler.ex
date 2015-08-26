@@ -3,6 +3,7 @@ defmodule TheFuzz.Similarity.JaroWinkler do
   Calculates the [Jaro-Winkler Distance](http://en.wikipedia.org/wiki/
   Jaro-Winkler_distance) between two strings.
   """
+  @behaviour TheFuzz.StringMetric
 
   @doc """
   Calculates the Jaro-Winkler distance between two strings.
@@ -23,12 +24,12 @@ defmodule TheFuzz.Similarity.JaroWinkler do
     cond do
       string1_length == 0 or string2_length == 0 -> nil
       string1 == string2 -> 1.0
-      string1_length > string2_length -> 
+      string1_length > string2_length ->
         score = Jaro.compare(string2, string1)
         modified_prefix = modify_prefix(string2, string1)
         score + ((modified_prefix * (1 - score)) / 10)
-      true -> 
-        score = Jaro.compare(string1, string2) 
+      true ->
+        score = Jaro.compare(string1, string2)
         modified_prefix = modify_prefix(string1, string2)
         score + ((modified_prefix * (1 - score)) / 10)
     end
@@ -45,7 +46,7 @@ defmodule TheFuzz.Similarity.JaroWinkler do
   end
   defp modify_prefix(s1, s2, prefix_length, last_character) do
     cond do
-      prefix_length < last_character && 
+      prefix_length < last_character &&
           String.at(s1, prefix_length) == String.at(s2, prefix_length) ->
         modify_prefix(s1, s2, prefix_length+1, last_character)
       true ->

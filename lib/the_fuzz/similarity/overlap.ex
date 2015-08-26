@@ -3,8 +3,9 @@ defmodule TheFuzz.Similarity.Overlap do
   Implements the [Overlap Similarity Metric](http://en.wikipedia.org/wiki/
   Overlap_coefficient)
   """
-
   import TheFuzz.Util, only: [ngram_tokenize: 2, intersect: 2]
+
+  @behaviour TheFuzz.StringMetric
 
   @doc """
   Compares two values using the Overlap Similarity metric and returns the 

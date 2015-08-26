@@ -119,7 +119,7 @@ defmodule MetaphoneAlgorithmTest do
     assert compute("zg") == "sk"
     assert compute("zgh") == "skh" # php wrongly says sf
     assert compute("zghz") == "shs" # php wrongly says sfs
-    assert compute("zgha") == "sh" # php wrongly says sf 
+    assert compute("zgha") == "sh" # php wrongly says sf
                                    # others wrongly say skh
     assert compute("zgn") == "sn"
     assert compute("zgns") == "skns"
@@ -145,7 +145,7 @@ defmodule MetaphoneAlgorithmTest do
     # d
     assert compute("d") == "t"
     assert compute("fudge") == "fjj" # php wrongly says fj
-    assert compute("dodgy") == "tjj" # php wrongly says tj 
+    assert compute("dodgy") == "tjj" # php wrongly says tj
                                      # others wrongly say tjjy
     assert compute("dodgi") == "tjj" # php wrongly says tj
     assert compute("zd") == "st"
