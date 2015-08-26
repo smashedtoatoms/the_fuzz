@@ -50,7 +50,7 @@ defmodule TheFuzz.Mixfile do
   defp package do
     [
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
-      contributors: ["Jason Legler"],
+      contributors: ["Jason Legler", "Kiran Danduprolu"],
       licenses: ["Apache 2.0"],
       links: %{
         "GitHub" => "https://github.com/smashedtoatoms/the_fuzz",
