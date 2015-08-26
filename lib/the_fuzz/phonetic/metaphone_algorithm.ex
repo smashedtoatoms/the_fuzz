@@ -9,12 +9,12 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
   import TheFuzz.Util, only: [len: 1, is_alphabetic?: 1, deduplicate: 1]
 
   @doc """
-  Returns the Metaphone phonetic version of the provided string.
-  ## Examples
-    iex> TheFuzz.Phonetic.MetaphoneAlgorithm.compute("z")
-    "s"
-    iex> TheFuzz.Phonetic.MetaphoneAlgorithm.compute("ztiaz")
-    "sxs"
+    Returns the Metaphone phonetic version of the provided string.
+    ## Examples
+      iex> TheFuzz.Phonetic.MetaphoneAlgorithm.compute("z")
+      "s"
+      iex> TheFuzz.Phonetic.MetaphoneAlgorithm.compute("ztiaz")
+      "sxs"
   """
   def compute(value) do
     cond do
