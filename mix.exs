@@ -42,8 +42,8 @@ defmodule TheFuzz.Mixfile do
     String metrics and phonetic algorithms for Elixir (e.g. Dice/Sorensen, 
     Hamming, Jaccard, Jaro, Jaro-Winkler, Levenshtein, Metaphone, N-Gram, 
     NYSIIS, Overlap, Ratcliff/Obershelp, Refined NYSIIS, Refined Soundex, 
-    Soundex, Weighted Levenshtein).  Based Heavily on StringMetrics for Scala
-    written by Rocky Madden.
+    Soundex, Tversky, Tanimoto, Weighted Levenshtein).  Based Heavily on 
+    StringMetrics for Scala written by Rocky Madden.
     """
   end
 
