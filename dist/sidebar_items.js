@@ -22,6 +22,8 @@ sidebarNodes = {
 "docs": ["compare/2","compare/3"]
 },{"id": "TheFuzz.Similarity.Overlap",
 "docs": ["compare/2","compare/3"]
+},{"id": "TheFuzz.Similarity.Tversky",
+"docs": ["compare/2","compare/3"]
 },{"id": "TheFuzz.Similarity.WeightedLevenshtein",
 "docs": ["compare/2","compare/3"]
 },{"id": "TheFuzz.StringMetric",
