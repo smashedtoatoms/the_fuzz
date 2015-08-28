@@ -17,6 +17,7 @@ defmodule TheFuzz do
   - Levenshtein distance: **:levenshtein**
   - n Gram similarity: **:n_gram** 
   - Overlap coefficient: **:overlap**
+  - Tanimoto coefficient: **:tanimoto**
   - Weighted Levenshtein distance: **:weighted_levenshtein**
 
   Note: Some of these metrics will use default values for other parameters
@@ -55,6 +56,10 @@ defmodule TheFuzz do
     TheFuzz.Similarity.Overlap.compare(a, b)
   end
 
+  def compare(:tanimoto, a, b) do
+    TheFuzz.Similarity.Tversky.compare(a, b)
+  end
+
   def compare(:weighted_levenshtein, a, b) do
     TheFuzz.Similarity.WeightedLevenshtein.compare(a, b)
   end
@@ -70,6 +75,7 @@ defmodule TheFuzz do
   - Sorensen Dice coefficient: **:dice_sorensen**
   - Jaccard Similarity coefficient: **:jaccard**
   - n Gram similarity: **:n_gram** 
+  - Tversky index: **:tversky**
   - Weighted Levenshtein distance: **:weighted_levenshtein**
   """
   def compare(metric_type, a, b, opts)
@@ -83,6 +89,10 @@ defmodule TheFuzz do
 
   def compare(:n_gram, a, b, n) do
     TheFuzz.Similarity.NGram.compare(a, b, n)
+  end
+
+  def compare(:tversky, a, b, %{} = opts) do
+    TheFuzz.Similarity.Tversky.compare(a, b, opts)
   end
 
   def compare(:weighted_levenshtein, a, b, %{} = weights) do

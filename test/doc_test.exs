@@ -10,6 +10,7 @@ defmodule DocTest do
   doctest TheFuzz.Similarity.Levenshtein
   doctest TheFuzz.Similarity.NGram
   doctest TheFuzz.Similarity.Overlap
+  doctest TheFuzz.Similarity.Tversky
   doctest TheFuzz.Similarity.WeightedLevenshtein
   doctest TheFuzz.Util
 end
