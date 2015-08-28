@@ -3,7 +3,7 @@ defmodule TheFuzz.Mixfile do
 
   def project do
     [app: :the_fuzz,
-     version: "0.2.0",
+     version: "0.2.1",
      elixir: "~> 1.0.0",
      name: "TheFuzz",
      source_url: "https://github.com/smashedtoatoms/the_fuzz",
