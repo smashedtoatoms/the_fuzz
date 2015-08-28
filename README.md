@@ -15,6 +15,8 @@ The following algorithms are currently implemented.
 1. LevenshteinDistance
 1. NGramSimilarityMetric
 1. OverlapMetric
+1. TanimotoCoefficientMetric
+1. TverskyIndexMetric
 1. WeightedLevenshteinDistance
 1. MetaphoneAlgorithm
 
