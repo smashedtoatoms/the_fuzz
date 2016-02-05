@@ -3,7 +3,7 @@ defmodule TheFuzz.Mixfile do
 
   def project do
     [app: :the_fuzz,
-     version: "0.2.1",
+     version: "0.2.2",
      elixir: "~> 1.2.1",
      name: "TheFuzz",
      source_url: "https://github.com/smashedtoatoms/the_fuzz",
@@ -50,7 +50,7 @@ defmodule TheFuzz.Mixfile do
   defp package do
     [
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
-      contributors: ["Jason Legler", "Kiran Danduprolu"],
+      maintainers: ["Jason Legler", "Kiran Danduprolu"],
       licenses: ["Apache 2.0"],
       links: %{
         "GitHub" => "https://github.com/smashedtoatoms/the_fuzz",
