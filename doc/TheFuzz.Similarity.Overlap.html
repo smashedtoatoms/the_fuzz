@@ -3,116 +3,103 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-        <title>TheFuzz.Similarity.Overlap – TheFuzz v0.2.2</title>
-      
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc">
-
-    <link rel="stylesheet" href="dist/app.css">
+    <meta name="generator" content="ExDoc v0.11.5">
+    <title>TheFuzz.Similarity.Overlap – TheFuzz v0.3.0</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="https://hexdocs.pm/the_fuzz/TheFuzz.Similarity.Overlap.html" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
-  <body>
+  <body data-type="modules">
 
-    
-    <div class="row row-offcanvas row-offcanvas-left">
-<section id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
-  <p class="pull-right visible-xs">
-  <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
-    <span class="glyphicon glyphicon-search"></span>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
   </button>
-  </p>
 
-  <h1 id="full_list_header">
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        TheFuzz
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.3.0
+      </h2>
+    </div>
     
-      <a href="https://github.com/smashedtoatoms/the_fuzz">TheFuzz v0.2.2</a>
-    
-  </h1>
+  </a>
 
-  <h2 id="sub_list_header">
-    
-    <a href="overview.html">Overview</a>
-  </h2>
-
-  <div class="nav">
-    
-      <span><a id="modules_list" href="#full_list">Modules</a></span>
-    
-    
-      <span role="presentation" class="disabled">Exceptions</span>
-    
-    
-      <span role="presentation" class="disabled">Protocols</span>
-    
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
   </div>
 
-  <div id="search">
-    <div class="col-xs-10">
-      <div class="input-group input-group-sm">
-        <label for="search_field" class="sr-only">Search</label>
-        <input type="text" id="search_field" class="form-control" placeholder="Search" autocomplete="off" autofocus="autofocus" results="0">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-        </span>
-      </div><!-- /input-group -->
-    </div><!-- /.col-xs-10 -->
-    <div class="col-xs-2" id="spinning">
-      <span></span>
-    </div><!-- /.col-xs-2 -->
-  </div><!-- /#search .row -->
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-  <script src="dist/sidebar_items.js" defer></script>
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
 
-  <ul id="full_list">
+    
+
+    
   </ul>
 
-  <div id="no_results"></div>
-</section><!--/.sidebar-offcanvas -->
-<section id="content" class="col-xs-12 col-sm-9">
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
 
+<section class="content">
+  <div id="content" class="content-inner">
 
-      <div class="breadcrumbs">
-        <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
-        </button>
-        TheFuzz v0.2.2 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="TheFuzz.html#content">TheFuzz</a> &rarr; Similarity &rarr; <a href="TheFuzz.Similarity.Overlap.html#content">Overlap</a>
-      </div>
 
       <h1>
+        <small class="visible-xs">TheFuzz v0.3.0</small>
         TheFuzz.Similarity.Overlap
+        
+        
+          <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/overlap.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
         
       </h1>
 
-      <ul class="summary_links">
-        
-          <li><a href="#summary_details">Summary</a></li>
-        
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-        
-      </ul>
-
       
         <section id="moduledoc" class="docstring">
-          <p>Implements the <a href="http://en.wikipedia.org/wiki/
-Overlap_coefficient">Overlap Similarity Metric</a></p>
+          <p>Implements the <a href="http://en.wikipedia.org/wiki/%0AOverlap_coefficient">Overlap Similarity Metric</a></p>
 
         </section>
       
 
       
-        <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/overlap.ex#L2" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
 
-      
-        <section id="summary_details" class="details_list">
-          <h1>Summary</h1>
-          <table class="summary">
-            <tr>
-  <td class="summary_signature"><a href="#compare/2">compare(a, b)</a></td>
-  <td class="summary_synopsis"><p>Compares two values using the Overlap Similarity metric and returns the 
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#compare/2">compare(a, b)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Compares two values using the Overlap Similarity metric and returns the 
 coefficient.  It takes the ngram size as the third argument, and, if
 none is provided, assumes that you want to use 1.</p>
 <h2>Examples</h2>
@@ -122,30 +109,47 @@ TheFuzz.Similarity.Overlap.compare(&quot;compare me&quot;, &quot;to me&quot;, 2)
 0.8
 iex&gt; TheFuzz.Similarity.Overlap.compare(&quot;or me&quot;, &quot;me&quot;, 1)
 1.0</code></pre>
-</td>
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#compare/3">compare(a, b, n)</a></td>
-  <td class="summary_synopsis"></td>
-</tr>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#compare/3">compare(a, b, n)</a>
+  </div>
+  
+</div>
 
-          </table>
+  </div>
+
+
+          
+
+          
+
         </section>
       
 
       
 
       
-        <section id="functions_details" class="details_list">
-          <h1>Functions</h1>
-          <section class="detail">
-  <div class="detail_header" id="compare/2">
-    <span class="signature"><strong>compare(a, b)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#compare/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="compare/2">
+  <div class="detail-header">
+    <a href="#compare/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">compare(a, b)</span>
+      
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/overlap.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -161,27 +165,24 @@ iex&gt; TheFuzz.Similarity.Overlap.compare(&quot;or me&quot;, &quot;me&quot;, 1)
 1.0</code></pre>
 
   </section>
-  
-    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/overlap.ex#L10" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="compare/3">
-    <span class="signature"><strong>compare(a, b, n)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#compare/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="compare/3">
+  <div class="detail-header">
+    <a href="#compare/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">compare(a, b, n)</span>
+      
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/overlap.ex#L23" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     
   </section>
-  
-    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/overlap.ex#L23" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
@@ -189,10 +190,23 @@ iex&gt; TheFuzz.Similarity.Overlap.compare(&quot;or me&quot;, &quot;me&quot;, 1)
       
 
       
-      </section> <!--/content -->
-</div><!--/row -->
-
-    <script src="dist/app.js"></script>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.5),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-918614602f.js"></script>
   </body>
 </html>
 

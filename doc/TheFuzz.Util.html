@@ -3,96 +3,74 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-        <title>TheFuzz.Util – TheFuzz v0.2.2</title>
-      
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc">
-
-    <link rel="stylesheet" href="dist/app.css">
+    <meta name="generator" content="ExDoc v0.11.5">
+    <title>TheFuzz.Util – TheFuzz v0.3.0</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="https://hexdocs.pm/the_fuzz/TheFuzz.Util.html" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
-  <body>
+  <body data-type="modules">
 
-    
-    <div class="row row-offcanvas row-offcanvas-left">
-<section id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
-  <p class="pull-right visible-xs">
-  <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
-    <span class="glyphicon glyphicon-search"></span>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
   </button>
-  </p>
 
-  <h1 id="full_list_header">
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        TheFuzz
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.3.0
+      </h2>
+    </div>
     
-      <a href="https://github.com/smashedtoatoms/the_fuzz">TheFuzz v0.2.2</a>
-    
-  </h1>
+  </a>
 
-  <h2 id="sub_list_header">
-    
-    <a href="overview.html">Overview</a>
-  </h2>
-
-  <div class="nav">
-    
-      <span><a id="modules_list" href="#full_list">Modules</a></span>
-    
-    
-      <span role="presentation" class="disabled">Exceptions</span>
-    
-    
-      <span role="presentation" class="disabled">Protocols</span>
-    
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
   </div>
 
-  <div id="search">
-    <div class="col-xs-10">
-      <div class="input-group input-group-sm">
-        <label for="search_field" class="sr-only">Search</label>
-        <input type="text" id="search_field" class="form-control" placeholder="Search" autocomplete="off" autofocus="autofocus" results="0">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-        </span>
-      </div><!-- /input-group -->
-    </div><!-- /.col-xs-10 -->
-    <div class="col-xs-2" id="spinning">
-      <span></span>
-    </div><!-- /.col-xs-2 -->
-  </div><!-- /#search .row -->
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-  <script src="dist/sidebar_items.js" defer></script>
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
 
-  <ul id="full_list">
+    
+
+    
   </ul>
 
-  <div id="no_results"></div>
-</section><!--/.sidebar-offcanvas -->
-<section id="content" class="col-xs-12 col-sm-9">
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
 
+<section class="content">
+  <div id="content" class="content-inner">
 
-      <div class="breadcrumbs">
-        <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
-        </button>
-        TheFuzz v0.2.2 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="TheFuzz.html#content">TheFuzz</a> &rarr; <a href="TheFuzz.Util.html#content">Util</a>
-      </div>
 
       <h1>
+        <small class="visible-xs">TheFuzz v0.3.0</small>
         TheFuzz.Util
         
+        
+          <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary_details">Summary</a></li>
-        
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -102,80 +80,121 @@
       
 
       
-        <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L2" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
 
-      
-        <section id="summary_details" class="details_list">
-          <h1>Summary</h1>
-          <table class="summary">
-            <tr>
-  <td class="summary_signature"><a href="#deduplicate/1">deduplicate(value)</a></td>
-  <td class="summary_synopsis"><p>Removes duplicates from a string (except for c)</p>
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#deduplicate/1">deduplicate(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Removes duplicates from a string (except for c)</p>
 <h2>Example</h2>
 <pre><code class="iex elixir">iex&gt; TheFuzz.Util.deduplicate(&quot;buzz&quot;)
 &quot;buz&quot;
 iex&gt; TheFuzz.Util.deduplicate(&quot;accept&quot;)
 &quot;accept&quot;</code></pre>
-</td>
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#intersect/2">intersect(l1, l2)</a></td>
-  <td class="summary_synopsis"><p>Finds the intersection of two lists.  If Strings are provided, it uses the
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#intersect/2">intersect(l1, l2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Finds the intersection of two lists.  If Strings are provided, it uses the
 codepoints of said string.</p>
 <h2>Example</h2>
 <pre><code class="iex elixir">iex&gt; TheFuzz.Util.intersect(&#39;context&#39;, &#39;contentcontent&#39;)
 &#39;contet&#39;
 iex&gt; TheFuzz.Util.intersect(&quot;context&quot;, &quot;contentcontent&quot;)
 [&quot;c&quot;, &quot;o&quot;, &quot;n&quot;, &quot;t&quot;, &quot;e&quot;, &quot;t&quot;]</code></pre>
-</td>
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#is_alphabetic?/1">is_alphabetic?(value)</a></td>
-  <td class="summary_synopsis"><p>Checks to see if a string is alphabetic.</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_alphabetic?/1">is_alphabetic?(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Checks to see if a string is alphabetic.</p>
 <h2>Example</h2>
 <pre><code class="iex elixir">iex&gt; TheFuzz.Util.is_alphabetic?(&quot;Jason5&quot;)
 false
 iex&gt; TheFuzz.Util.is_alphabetic?(&quot;Jason&quot;)
 true</code></pre>
-</td>
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#len/1">len(value)</a></td>
-  <td class="summary_synopsis"><p>Finds the length of a string in a less verbose way.</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#len/1">len(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Finds the length of a string in a less verbose way.</p>
 <h2>Example</h2>
 <pre><code class="iex elixir">iex&gt; TheFuzz.Util.len(&quot;Jason&quot;)
 5</code></pre>
-</td>
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#ngram_tokenize/2">ngram_tokenize(string, n)</a></td>
-  <td class="summary_synopsis"><p><a href="http://en.wikipedia.org/wiki/N-gram">ngram tokenizes</a> the string provided.</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ngram_tokenize/2">ngram_tokenize(string, n)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p><a href="http://en.wikipedia.org/wiki/N-gram">ngram tokenizes</a> the string provided.</p>
 <h2>Example</h2>
 <pre><code class="iex elixir">iex&gt; TheFuzz.Util.ngram_tokenize(&quot;abcdefghijklmnopqrstuvwxyz&quot;, 2)
 [&quot;ab&quot;, &quot;bc&quot;, &quot;cd&quot;, &quot;de&quot;, &quot;ef&quot;, &quot;fg&quot;, &quot;gh&quot;, &quot;hi&quot;, &quot;ij&quot;, &quot;jk&quot;, &quot;kl&quot;, &quot;lm&quot;,
 &quot;mn&quot;, &quot;no&quot;, &quot;op&quot;, &quot;pq&quot;, &quot;qr&quot;, &quot;rs&quot;, &quot;st&quot;, &quot;tu&quot;, &quot;uv&quot;, &quot;vw&quot;, &quot;wx&quot;, &quot;xy&quot;,
 &quot;yz&quot;]</code></pre>
-</td>
-</tr>
+</div>
+  
+</div>
 
-          </table>
+  </div>
+
+
+          
+
+          
+
         </section>
       
 
       
 
       
-        <section id="functions_details" class="details_list">
-          <h1>Functions</h1>
-          <section class="detail">
-  <div class="detail_header" id="deduplicate/1">
-    <span class="signature"><strong>deduplicate(value)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#deduplicate/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="deduplicate/1">
+  <div class="detail-header">
+    <a href="#deduplicate/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">deduplicate(value)</span>
+      
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L34" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -187,18 +206,18 @@ iex&gt; TheFuzz.Util.deduplicate(&quot;accept&quot;)
 &quot;accept&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L26" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="intersect/2">
-    <span class="signature"><strong>intersect(l1, l2)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#intersect/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="intersect/2">
+  <div class="detail-header">
+    <a href="#intersect/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">intersect(l1, l2)</span>
+      
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L56" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -211,18 +230,18 @@ iex&gt; TheFuzz.Util.intersect(&quot;context&quot;, &quot;contentcontent&quot;)
 [&quot;c&quot;, &quot;o&quot;, &quot;n&quot;, &quot;t&quot;, &quot;e&quot;, &quot;t&quot;]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L47" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="is_alphabetic?/1">
-    <span class="signature"><strong>is_alphabetic?(value)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#is_alphabetic?/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="is_alphabetic?/1">
+  <div class="detail-header">
+    <a href="#is_alphabetic?/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">is_alphabetic?(value)</span>
+      
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -234,18 +253,18 @@ iex&gt; TheFuzz.Util.is_alphabetic?(&quot;Jason&quot;)
 true</code></pre>
 
   </section>
-  
-    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L14" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="len/1">
-    <span class="signature"><strong>len(value)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#len/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="len/1">
+  <div class="detail-header">
+    <a href="#len/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">len(value)</span>
+      
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L12" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -255,18 +274,18 @@ true</code></pre>
 5</code></pre>
 
   </section>
-  
-    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L6" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="ngram_tokenize/2">
-    <span class="signature"><strong>ngram_tokenize(string, n)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#ngram_tokenize/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="ngram_tokenize/2">
+  <div class="detail-header">
+    <a href="#ngram_tokenize/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">ngram_tokenize(string, n)</span>
+      
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L85" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -278,10 +297,7 @@ true</code></pre>
 &quot;yz&quot;]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L77" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
@@ -289,10 +305,23 @@ true</code></pre>
       
 
       
-      </section> <!--/content -->
-</div><!--/row -->
-
-    <script src="dist/app.js"></script>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.5),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-918614602f.js"></script>
   </body>
 </html>
 
