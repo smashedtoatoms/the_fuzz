@@ -1,0 +1,51 @@
+<div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  <% url = config.homepage_url || "#{config.main}.html" %>
+  <a href="<%= url %>" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        <%= config.project %>
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v<%= config.version %>
+      </h2>
+    </div>
+    <%= if config.logo do %>
+      <img src="<%= logo_path(config) %>" alt="<%= config.project %>" class="sidebar-projectImage">
+    <% end %>
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list"><%= config.extra_section || "Pages" %></a></li>
+
+    <%= unless Enum.empty?(modules) do %>
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    <% end %>
+
+    <%= unless Enum.empty?(exceptions) do %>
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    <% end %>
+
+    <%= unless Enum.empty?(protocols) do %>
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    <% end %>
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v<%= ExDoc.version %>">
+    <title><%= page.title %> – <%= config.project %> v<%= config.version %></title>
+    <link rel="stylesheet" href="<%= asset_rev config.output, "dist/app*.css" %>" />
+    <%= if config.canonical do %>
+      <link rel="canonical" href="<%= config.canonical %>" />
+    <% end %>
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="<%= sidebar_type(page.type) %>">

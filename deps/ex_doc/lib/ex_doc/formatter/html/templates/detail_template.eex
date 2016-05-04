@@ -1,0 +1,26 @@
+<div class="detail" id="<%=enc_h link_id(node) %>">
+  <div class="detail-header">
+    <a href="#<%=enc_h link_id(node) %>" class="detail-link" title="Link to this <%= pretty_type(node) %>">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature"><%=h node.signature %></span>
+      <%= if node.source do %>
+      <a href="<%= node.source %>" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    <% end %>
+  </div>
+  <%= if specs = get_specs(node) do %>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        <%= for spec <- specs do %>
+          <pre><code class="elixir"><%= spec %></code></pre>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <section class="docstring">
+    <%= to_html(node.doc) %>
+  </section>
+</div>
