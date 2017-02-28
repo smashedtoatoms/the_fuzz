@@ -3,7 +3,7 @@ TheFuzz
 
 **Fuzzy string matching algorithm implementations**
 
-TheFuzz is a collection of metrics and phonetic (fuzzy string matching) algorithms for Elixir.  It is based entirely on the [rockymadden stringmetric library](https://github.com/rockymadden/stringmetric) written by Rocky Madden for Scala.  There will eventually be Elixir implementations of all of the string metric and phonetic algorithms implemented in his library.  The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. The best way to see usage is to check out the tests and the [documentation](http://smashedtoatoms.github.io/the_fuzz).
+TheFuzz is a collection of metrics and phonetic (fuzzy string matching) algorithms for Elixir.  It is based entirely on the [rockymadden stringmetric library](https://github.com/rockymadden/stringmetric) written by Rocky Madden for Scala.  There will eventually be Elixir implementations of all of the string metric and phonetic algorithms implemented in his library.  The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. The best way to see usage is to check out the tests and the [documentation](https://smashedtoatoms.github.io/the_fuzz/api-reference.html).
 
 The following algorithms are currently implemented.
 
