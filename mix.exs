@@ -39,10 +39,7 @@ defmodule TheFuzz.Mixfile do
 
   defp description do
     """
-    String metrics and phonetic algorithms for Elixir (e.g. Dice/Sorensen, 
-    Hamming, Jaccard, Jaro, Jaro-Winkler, Levenshtein, Metaphone, N-Gram, 
-    NYSIIS, Overlap, Ratcliff/Obershelp, Refined NYSIIS, Refined Soundex, 
-    Soundex, Tversky, Tanimoto, Weighted Levenshtein).  Based Heavily on 
+    String metrics and phonetic algorithms for Elixir.  Based Heavily on
     StringMetrics for Scala written by Rocky Madden.
     """
   end
@@ -50,7 +47,7 @@ defmodule TheFuzz.Mixfile do
   defp package do
     [
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
-      maintainers: ["Jason Legler", "Kiran Danduprolu"],
+      maintainers: ["Jason Legler", "Kiran Danduprolu", "Craig Waterman"],
       licenses: ["Apache 2.0"],
       links: %{
         "GitHub" => "https://github.com/smashedtoatoms/the_fuzz",
