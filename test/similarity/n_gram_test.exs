@@ -1,7 +1,7 @@
 defmodule NGramTest do
   use ExUnit.Case
 
-  import TheFuzz.Similarity.NGram, only: [compare: 2, compare: 3]
+  import TheFuzz.Similarity.NGram, only: [compare: 3]
 
   test "return None with empty arguments" do
     assert compare("", "", 1) == nil

@@ -3,21 +3,21 @@ defmodule TheFuzz.Mixfile do
 
   def project do
     [app: :the_fuzz,
-     version: "0.3.0",
-     elixir: "~> 1.2.1",
+     version: "0.4.0",
+     elixir: "~> 1.6",
      name: "TheFuzz",
      source_url: "https://github.com/smashedtoatoms/the_fuzz",
      homepage_url: "https://github.com/smashedtoatoms/the_fuzz",
-     description: description,
-     package: package,
-     deps: deps]
+     description: description(),
+     package: package(),
+     deps: deps()]
   end
 
   # Configuration for the OTP application
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [extra_applications: [:logger]]
   end
 
   # Dependencies can be hex.pm packages:
@@ -31,9 +31,9 @@ defmodule TheFuzz.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:earmark, "~> 0.1", only: :dev},
-      {:ex_doc, "~> 0.11", only: :dev},
-      {:dogma, "~> 0.0", only: :dev}
+      {:earmark, "~> 1.2", only: :dev},
+      {:ex_doc, "~> 0.18", only: :dev},
+      {:dogma, "~> 0.1", only: :dev}
     ]
   end
 

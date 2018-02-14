@@ -44,15 +44,15 @@ defmodule TheFuzz.Similarity.WeightedLevenshtein do
   def compare(a, b, _) when byte_size(a) == 0 or byte_size(b) == 0, do: nil
   def compare(a, b, _) when a == b, do: 0
   def compare(a, b, %{} = weights) do
-    distance(a |> String.to_char_list, b |> String.to_char_list, weights)
+    distance(a |> String.to_charlist, b |> String.to_charlist, weights)
   end
 
   defp store_result(key, result, cache) do
-    {result, Dict.put(cache, key, result)}
+    {result, Map.put(cache, key, result)}
   end
 
   defp distance(a, b, weights) do
-    distance(a, b, weights, HashDict.new) |> elem(0)
+    distance(a, b, weights, Map.new) |> elem(0)
   end
   defp distance(a, [] = b, %{delete: delete_cost}, cache) do
     store_result({a, b}, delete_cost * length(a), cache)
@@ -68,8 +68,8 @@ defmodule TheFuzz.Similarity.WeightedLevenshtein do
     insert: insert_cost,
     replace: replace_cost
   } = weights, cache) do
-    case Dict.has_key?(cache, {a, b}) do
-      true -> {Dict.get(cache, {a, b}), cache}
+    case Map.has_key?(cache, {a, b}) do
+      true -> {Map.get(cache, {a, b}), cache}
       false ->
         {l1, c1} = distance(a, rest2, weights, cache)
         {l2, c2} = distance(rest1, b, weights, c1)

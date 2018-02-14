@@ -4,8 +4,7 @@ defmodule TheFuzz.Phonetic.MetaphoneAlgorithm do
   Metaphone) of a string.
   """
 
-  import String, only: [downcase: 1, first: 1, split_at: 2, last: 1, at: 2,
-    codepoints: 1]
+  import String, only: [downcase: 1, first: 1, split_at: 2, last: 1, at: 2]
   import TheFuzz.Util, only: [len: 1, is_alphabetic?: 1, deduplicate: 1]
 
   @doc """

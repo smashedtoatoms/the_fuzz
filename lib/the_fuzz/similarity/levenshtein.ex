@@ -22,22 +22,22 @@ defmodule TheFuzz.Similarity.Levenshtein do
   def compare(a, b) when byte_size(a) == 0 or byte_size(b) == 0, do: nil
   def compare(a, b) when a == b, do: 0
   def compare(a, b) do
-    distance(a |> String.to_char_list, b |> String.to_char_list)
+    distance(a |> String.to_charlist, b |> String.to_charlist)
   end
 
   defp store_result(key, result, cache) do
-    {result, Dict.put(cache, key, result)}
+    {result, Map.put(cache, key, result)}
   end
 
-  defp distance(a, b), do: distance(a, b, HashDict.new) |> elem(0)
+  defp distance(a, b), do: distance(a, b, Map.new) |> elem(0)
   defp distance(a, [] = b, cache), do: store_result({a, b}, length(a), cache)
   defp distance([] = a, b, cache), do: store_result({a, b}, length(b), cache)
   defp distance([x | rest1], [x | rest2], cache) do
     distance(rest1, rest2, cache)
   end
   defp distance([_ | rest1] = a, [_ | rest2] = b, cache) do
-    case Dict.has_key?(cache, {a, b}) do
-      true -> {Dict.get(cache, {a, b}), cache}
+    case Map.has_key?(cache, {a, b}) do
+      true -> {Map.get(cache, {a, b}), cache}
       false ->
         {l1, c1} = distance(a, rest2, cache)
         {l2, c2} = distance(rest1, b, c1)

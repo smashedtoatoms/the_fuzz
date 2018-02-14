@@ -1,7 +1,7 @@
 defmodule WeightedLevenshteinTest do
   use ExUnit.Case
 
-  import TheFuzz.Similarity.WeightedLevenshtein, only: [compare: 2, compare: 3]
+  import TheFuzz.Similarity.WeightedLevenshtein, only: [compare: 3]
 
   test "returns nil with empty arguments" do
     assert compare("", "", %{delete: 10, insert: 0.1, replace: 1}) == nil
