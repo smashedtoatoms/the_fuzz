@@ -6,7 +6,7 @@ defmodule TheFuzz.Phonetic.MetaphoneMetric do
 
   import TheFuzz.Phonetic.MetaphoneAlgorithm, only: [compute: 1]
   import TheFuzz.Util, only: [len: 1, is_alphabetic?: 1]
-  import String, only: [first: 1, codepoints: 1]
+  import String, only: [first: 1]
 
   @doc """
     Compares two values phonetically and returns a boolean of whether they match
