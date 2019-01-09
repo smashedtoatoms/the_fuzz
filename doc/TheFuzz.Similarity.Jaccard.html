@@ -1,24 +1,17 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.18.3">
-    <title>TheFuzz.Similarity.Jaccard – TheFuzz v0.4.0</title>
-    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
-    
-      <link rel="canonical" href="https://hexdocs.pm/the_fuzz/TheFuzz.Similarity.Jaccard.html" />
-    
-    <script src="dist/sidebar_items-f6070a6e2f.js"></script>
-    
-    
-    
+    <meta name="generator" content="ExDoc v0.19.2">
+    <title>TheFuzz.Similarity.Jaccard — TheFuzz v0.5.0</title>
+    <link rel="stylesheet" href="dist/html-c1666276880c0f8e3769.css" />
+    <script src="dist/sidebar_items-ead3568f0e.js"></script>
     
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
-
     <div class="main">
 <button class="sidebar-button sidebar-toggle">
   <span class="icon-menu" aria-hidden="true"></span>
@@ -30,17 +23,14 @@
 </button>
 <section class="sidebar">
 
-  
   <a href="https://github.com/smashedtoatoms/the_fuzz" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        TheFuzz
-      </h1>
+TheFuzz      </h1>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
-    
   </a>
 
   <form class="sidebar-search" action="search.html">
@@ -53,13 +43,9 @@
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
 
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -71,26 +57,21 @@
 
 
       <h1>
-        <small class="visible-xs">TheFuzz v0.4.0</small>
-        TheFuzz.Similarity.Jaccard
-        
+        <small class="visible-xs">TheFuzz v0.5.0</small>
+TheFuzz.Similarity.Jaccard        
           <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/jaccard.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
-        
       </h1>
 
-      
+
         <section id="moduledoc">
-          <p>This module contains functions to calculate the <a href="https://en.wikipedia.org/wiki/Jaccard_index">Jaccard similarity 
-coefficient</a> between two given 
+<p>This module contains functions to calculate the <a href="https://en.wikipedia.org/wiki/Jaccard_index">Jaccard similarity
+coefficient</a> between two given
 strings</p>
-
         </section>
-      
 
-      
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
@@ -99,133 +80,100 @@ strings</p>
             </a>
             Summary
           </h1>
-          
-
-          
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#compare/2">compare(a, b)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Calculates the Jaccard similarity coefficient between two given strings with
 a default ngram size of 2</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#compare/3">compare(a, b, n)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Calculates the Jaccard similarity coefficient between two given strings with
 the specified ngram size</p>
 </div>
-  
 </div>
-
   </div>
-
-
-          
-
         </section>
-      
 
-      
-
-      
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Functions
-          </h1>
-          <div class="detail" id="compare/2">
-  
-  
-  <div class="detail-header">
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="compare/2">
+    <div class="detail-header">
     <a href="#compare/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">compare(a, b)</span>
-    
+    <h1 class="signature">compare(a, b)</span>
       <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/jaccard.ex#L22" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Calculates the Jaccard similarity coefficient between two given strings with
+<p>Calculates the Jaccard similarity coefficient between two given strings with
 a default ngram size of 2</p>
 <h2 id="compare/2-examples" class="section-heading">
   <a href="#compare/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; TheFuzz.Similarity.Jaccard.compare(&quot;contact&quot;, &quot;context&quot;)
-0.3333333333333333
-iex&gt; TheFuzz.Similarity.Jaccard.compare(&quot;ht&quot;, &quot;hththt&quot;)
-0.2</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaccard</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="2947590273-1">(</span><span class="s">&quot;contact&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;context&quot;</span><span class="p" data-group-id="2947590273-1">)</span><span class="w">
+</span><span class="mf">0.3333333333333333</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaccard</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="2947590273-2">(</span><span class="s">&quot;ht&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hththt&quot;</span><span class="p" data-group-id="2947590273-2">)</span><span class="w">
+</span><span class="mf">0.2</span></code></pre>
   </section>
-</div>
-<div class="detail" id="compare/3">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="compare/3">
+    <div class="detail-header">
     <a href="#compare/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">compare(a, b, n)</span>
-    
-      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/jaccard.ex#L39" class="view-source" rel="help" title="View Source">
+    <h1 class="signature">compare(a, b, n)</span>
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/jaccard.ex#L41" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Calculates the Jaccard similarity coefficient between two given strings with
+<p>Calculates the Jaccard similarity coefficient between two given strings with
 the specified ngram size</p>
 <h2 id="compare/3-examples" class="section-heading">
   <a href="#compare/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; TheFuzz.Similarity.Jaccard.compare(&quot;contact&quot;, &quot;context&quot;, 3)
-0.25
-iex&gt; TheFuzz.Similarity.Jaccard.compare(&quot;contact&quot;, &quot;context&quot;, 1)
-0.5555555555555556</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaccard</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="1111431032-1">(</span><span class="s">&quot;contact&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;context&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="1111431032-1">)</span><span class="w">
+</span><span class="mf">0.25</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaccard</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="1111431032-2">(</span><span class="s">&quot;contact&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;context&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="1111431032-2">)</span><span class="w">
+</span><span class="mf">0.5555555555555556</span></code></pre>
   </section>
-</div>
-
+</section>
+          </div>
         </section>
-      
-
-      
           <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.2),
           </span>
           <span class="line">
             designed by
-            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
       </footer>
@@ -233,10 +181,7 @@ iex&gt; TheFuzz.Similarity.Jaccard.compare(&quot;contact&quot;, &quot;context&qu
   </div>
 </section>
 </div>
-  <script src="dist/app-9bd040e5e5.js"></script>
-  
-  
-  
+  <script src="dist/html-c1666276880c0f8e3769.js"></script>
   
   </body>
 </html>

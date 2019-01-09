@@ -1,24 +1,17 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.18.3">
-    <title>TheFuzz.Util – TheFuzz v0.4.0</title>
-    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
-    
-      <link rel="canonical" href="https://hexdocs.pm/the_fuzz/TheFuzz.Util.html" />
-    
-    <script src="dist/sidebar_items-f6070a6e2f.js"></script>
-    
-    
-    
+    <meta name="generator" content="ExDoc v0.19.2">
+    <title>TheFuzz.Util — TheFuzz v0.5.0</title>
+    <link rel="stylesheet" href="dist/html-c1666276880c0f8e3769.css" />
+    <script src="dist/sidebar_items-ead3568f0e.js"></script>
     
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
-
     <div class="main">
 <button class="sidebar-button sidebar-toggle">
   <span class="icon-menu" aria-hidden="true"></span>
@@ -30,17 +23,14 @@
 </button>
 <section class="sidebar">
 
-  
   <a href="https://github.com/smashedtoatoms/the_fuzz" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        TheFuzz
-      </h1>
+TheFuzz      </h1>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
-    
   </a>
 
   <form class="sidebar-search" action="search.html">
@@ -53,13 +43,9 @@
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
 
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -71,24 +57,19 @@
 
 
       <h1>
-        <small class="visible-xs">TheFuzz v0.4.0</small>
-        TheFuzz.Util
-        
+        <small class="visible-xs">TheFuzz v0.5.0</small>
+TheFuzz.Util        
           <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
-        
       </h1>
 
-      
+
         <section id="moduledoc">
-          <p>Utilities for TheFuzz.</p>
-
+<p>Utilities for TheFuzz.</p>
         </section>
-      
 
-      
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
@@ -97,275 +78,215 @@
             </a>
             Summary
           </h1>
-          
-
-          
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#deduplicate/1">deduplicate(value)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Removes duplicates from a string (except for c)</p>
 <h2>Example</h2>
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.deduplicate(&quot;buzz&quot;)
-&quot;buz&quot;
-iex&gt; TheFuzz.Util.deduplicate(&quot;accept&quot;)
-&quot;accept&quot;</code></pre>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">deduplicate</span><span class="p" data-group-id="4940611598-1">(</span><span class="s">&quot;buzz&quot;</span><span class="p" data-group-id="4940611598-1">)</span><span class="w">
+</span><span class="s">&quot;buz&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">deduplicate</span><span class="p" data-group-id="4940611598-2">(</span><span class="s">&quot;accept&quot;</span><span class="p" data-group-id="4940611598-2">)</span><span class="w">
+</span><span class="s">&quot;accept&quot;</span></code></pre>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#intersect/2">intersect(l1, l2)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Finds the intersection of two lists.  If Strings are provided, it uses the
 codepoints of said string.</p>
 <h2>Example</h2>
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.intersect(&#39;context&#39;, &#39;contentcontent&#39;)
-&#39;contet&#39;
-iex&gt; TheFuzz.Util.intersect(&quot;context&quot;, &quot;contentcontent&quot;)
-[&quot;c&quot;, &quot;o&quot;, &quot;n&quot;, &quot;t&quot;, &quot;e&quot;, &quot;t&quot;]</code></pre>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">intersect</span><span class="p" data-group-id="8240405322-1">(</span><span class="sc">&#39;context&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;contentcontent&#39;</span><span class="p" data-group-id="8240405322-1">)</span><span class="w">
+</span><span class="sc">&#39;contet&#39;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">intersect</span><span class="p" data-group-id="8240405322-2">(</span><span class="s">&quot;context&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;contentcontent&quot;</span><span class="p" data-group-id="8240405322-2">)</span><span class="w">
+</span><span class="p" data-group-id="8240405322-3">[</span><span class="s">&quot;c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;o&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;t&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;e&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;t&quot;</span><span class="p" data-group-id="8240405322-3">]</span></code></pre>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#is_alphabetic?/1">is_alphabetic?(value)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Checks to see if a string is alphabetic.</p>
 <h2>Example</h2>
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.is_alphabetic?(&quot;Jason5&quot;)
-false
-iex&gt; TheFuzz.Util.is_alphabetic?(&quot;Jason&quot;)
-true</code></pre>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">is_alphabetic?</span><span class="p" data-group-id="1428549872-1">(</span><span class="s">&quot;Jason5&quot;</span><span class="p" data-group-id="1428549872-1">)</span><span class="w">
+</span><span class="no">false</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">is_alphabetic?</span><span class="p" data-group-id="1428549872-2">(</span><span class="s">&quot;Jason&quot;</span><span class="p" data-group-id="1428549872-2">)</span><span class="w">
+</span><span class="no">true</span></code></pre>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#len/1">len(value)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Finds the length of a string in a less verbose way.</p>
 <h2>Example</h2>
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.len(&quot;Jason&quot;)
-5</code></pre>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">len</span><span class="p" data-group-id="8408387649-1">(</span><span class="s">&quot;Jason&quot;</span><span class="p" data-group-id="8408387649-1">)</span><span class="w">
+</span><span class="mi">5</span></code></pre>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#ngram_tokenize/2">ngram_tokenize(string, n)</a>
   </div>
-  
     <div class="summary-synopsis"><p><a href="http://en.wikipedia.org/wiki/N-gram">ngram tokenizes</a> the string provided.</p>
 <h2>Example</h2>
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.ngram_tokenize(&quot;abcdefghijklmnopqrstuvwxyz&quot;, 2)
-[&quot;ab&quot;, &quot;bc&quot;, &quot;cd&quot;, &quot;de&quot;, &quot;ef&quot;, &quot;fg&quot;, &quot;gh&quot;, &quot;hi&quot;, &quot;ij&quot;, &quot;jk&quot;, &quot;kl&quot;, &quot;lm&quot;,
-&quot;mn&quot;, &quot;no&quot;, &quot;op&quot;, &quot;pq&quot;, &quot;qr&quot;, &quot;rs&quot;, &quot;st&quot;, &quot;tu&quot;, &quot;uv&quot;, &quot;vw&quot;, &quot;wx&quot;, &quot;xy&quot;,
-&quot;yz&quot;]</code></pre>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">ngram_tokenize</span><span class="p" data-group-id="0879165645-1">(</span><span class="s">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="0879165645-1">)</span><span class="w">
+</span><span class="p" data-group-id="0879165645-2">[</span><span class="s">&quot;ab&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;de&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ef&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;gh&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hi&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ij&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;jk&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;kl&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;lm&quot;</span><span class="p">,</span><span class="w">
+</span><span class="s">&quot;mn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;op&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pq&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;qr&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rs&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;st&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;tu&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;uv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;wx&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;xy&quot;</span><span class="p">,</span><span class="w">
+</span><span class="s">&quot;yz&quot;</span><span class="p" data-group-id="0879165645-2">]</span></code></pre>
 </div>
-  
 </div>
-
   </div>
-
-
-          
-
         </section>
-      
 
-      
-
-      
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Functions
-          </h1>
-          <div class="detail" id="deduplicate/1">
-  
-  
-  <div class="detail-header">
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="deduplicate/1">
+    <div class="detail-header">
     <a href="#deduplicate/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">deduplicate(value)</span>
-    
+    <h1 class="signature">deduplicate(value)</span>
       <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Removes duplicates from a string (except for c)</p>
+<p>Removes duplicates from a string (except for c)</p>
 <h2 id="deduplicate/1-example" class="section-heading">
   <a href="#deduplicate/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.deduplicate(&quot;buzz&quot;)
-&quot;buz&quot;
-iex&gt; TheFuzz.Util.deduplicate(&quot;accept&quot;)
-&quot;accept&quot;</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">deduplicate</span><span class="p" data-group-id="7301507450-1">(</span><span class="s">&quot;buzz&quot;</span><span class="p" data-group-id="7301507450-1">)</span><span class="w">
+</span><span class="s">&quot;buz&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">deduplicate</span><span class="p" data-group-id="7301507450-2">(</span><span class="s">&quot;accept&quot;</span><span class="p" data-group-id="7301507450-2">)</span><span class="w">
+</span><span class="s">&quot;accept&quot;</span></code></pre>
   </section>
-</div>
-<div class="detail" id="intersect/2">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="intersect/2">
+    <div class="detail-header">
     <a href="#intersect/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">intersect(l1, l2)</span>
-    
-      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L59" class="view-source" rel="help" title="View Source">
+    <h1 class="signature">intersect(l1, l2)</span>
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L62" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Finds the intersection of two lists.  If Strings are provided, it uses the
+<p>Finds the intersection of two lists.  If Strings are provided, it uses the
 codepoints of said string.</p>
 <h2 id="intersect/2-example" class="section-heading">
   <a href="#intersect/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.intersect(&#39;context&#39;, &#39;contentcontent&#39;)
-&#39;contet&#39;
-iex&gt; TheFuzz.Util.intersect(&quot;context&quot;, &quot;contentcontent&quot;)
-[&quot;c&quot;, &quot;o&quot;, &quot;n&quot;, &quot;t&quot;, &quot;e&quot;, &quot;t&quot;]</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">intersect</span><span class="p" data-group-id="7073807637-1">(</span><span class="sc">&#39;context&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;contentcontent&#39;</span><span class="p" data-group-id="7073807637-1">)</span><span class="w">
+</span><span class="sc">&#39;contet&#39;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">intersect</span><span class="p" data-group-id="7073807637-2">(</span><span class="s">&quot;context&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;contentcontent&quot;</span><span class="p" data-group-id="7073807637-2">)</span><span class="w">
+</span><span class="p" data-group-id="7073807637-3">[</span><span class="s">&quot;c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;o&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;t&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;e&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;t&quot;</span><span class="p" data-group-id="7073807637-3">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="is_alphabetic?/1">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="is_alphabetic?/1">
+    <div class="detail-header">
     <a href="#is_alphabetic?/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">is_alphabetic?(value)</span>
-    
+    <h1 class="signature">is_alphabetic?(value)</span>
       <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L22" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Checks to see if a string is alphabetic.</p>
+<p>Checks to see if a string is alphabetic.</p>
 <h2 id="is_alphabetic?/1-example" class="section-heading">
   <a href="#is_alphabetic?/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.is_alphabetic?(&quot;Jason5&quot;)
-false
-iex&gt; TheFuzz.Util.is_alphabetic?(&quot;Jason&quot;)
-true</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">is_alphabetic?</span><span class="p" data-group-id="7679292684-1">(</span><span class="s">&quot;Jason5&quot;</span><span class="p" data-group-id="7679292684-1">)</span><span class="w">
+</span><span class="no">false</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">is_alphabetic?</span><span class="p" data-group-id="7679292684-2">(</span><span class="s">&quot;Jason&quot;</span><span class="p" data-group-id="7679292684-2">)</span><span class="w">
+</span><span class="no">true</span></code></pre>
   </section>
-</div>
-<div class="detail" id="len/1">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="len/1">
+    <div class="detail-header">
     <a href="#len/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">len(value)</span>
-    
+    <h1 class="signature">len(value)</span>
       <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L12" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Finds the length of a string in a less verbose way.</p>
+<p>Finds the length of a string in a less verbose way.</p>
 <h2 id="len/1-example" class="section-heading">
   <a href="#len/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.len(&quot;Jason&quot;)
-5</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">len</span><span class="p" data-group-id="2414311167-1">(</span><span class="s">&quot;Jason&quot;</span><span class="p" data-group-id="2414311167-1">)</span><span class="w">
+</span><span class="mi">5</span></code></pre>
   </section>
-</div>
-<div class="detail" id="ngram_tokenize/2">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="ngram_tokenize/2">
+    <div class="detail-header">
     <a href="#ngram_tokenize/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">ngram_tokenize(string, n)</span>
-    
-      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L88" class="view-source" rel="help" title="View Source">
+    <h1 class="signature">ngram_tokenize(string, n)</span>
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/util.ex#L96" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p><a href="http://en.wikipedia.org/wiki/N-gram">ngram tokenizes</a> the string provided.</p>
+<p><a href="http://en.wikipedia.org/wiki/N-gram">ngram tokenizes</a> the string provided.</p>
 <h2 id="ngram_tokenize/2-example" class="section-heading">
   <a href="#ngram_tokenize/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; TheFuzz.Util.ngram_tokenize(&quot;abcdefghijklmnopqrstuvwxyz&quot;, 2)
-[&quot;ab&quot;, &quot;bc&quot;, &quot;cd&quot;, &quot;de&quot;, &quot;ef&quot;, &quot;fg&quot;, &quot;gh&quot;, &quot;hi&quot;, &quot;ij&quot;, &quot;jk&quot;, &quot;kl&quot;, &quot;lm&quot;,
-&quot;mn&quot;, &quot;no&quot;, &quot;op&quot;, &quot;pq&quot;, &quot;qr&quot;, &quot;rs&quot;, &quot;st&quot;, &quot;tu&quot;, &quot;uv&quot;, &quot;vw&quot;, &quot;wx&quot;, &quot;xy&quot;,
-&quot;yz&quot;]</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Util</span><span class="o">.</span><span class="n">ngram_tokenize</span><span class="p" data-group-id="1297831905-1">(</span><span class="s">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="1297831905-1">)</span><span class="w">
+</span><span class="p" data-group-id="1297831905-2">[</span><span class="s">&quot;ab&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;de&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ef&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;gh&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hi&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ij&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;jk&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;kl&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;lm&quot;</span><span class="p">,</span><span class="w">
+</span><span class="s">&quot;mn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;op&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pq&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;qr&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rs&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;st&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;tu&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;uv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;vw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;wx&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;xy&quot;</span><span class="p">,</span><span class="w">
+</span><span class="s">&quot;yz&quot;</span><span class="p" data-group-id="1297831905-2">]</span></code></pre>
   </section>
-</div>
-
+</section>
+          </div>
         </section>
-      
-
-      
           <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.2),
           </span>
           <span class="line">
             designed by
-            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
       </footer>
@@ -373,10 +294,7 @@ true</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-9bd040e5e5.js"></script>
-  
-  
-  
+  <script src="dist/html-c1666276880c0f8e3769.js"></script>
   
   </body>
 </html>

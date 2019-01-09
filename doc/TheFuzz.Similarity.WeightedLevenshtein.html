@@ -1,24 +1,17 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.18.3">
-    <title>TheFuzz.Similarity.WeightedLevenshtein – TheFuzz v0.4.0</title>
-    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
-    
-      <link rel="canonical" href="https://hexdocs.pm/the_fuzz/TheFuzz.Similarity.WeightedLevenshtein.html" />
-    
-    <script src="dist/sidebar_items-f6070a6e2f.js"></script>
-    
-    
-    
+    <meta name="generator" content="ExDoc v0.19.2">
+    <title>TheFuzz.Similarity.WeightedLevenshtein — TheFuzz v0.5.0</title>
+    <link rel="stylesheet" href="dist/html-c1666276880c0f8e3769.css" />
+    <script src="dist/sidebar_items-ead3568f0e.js"></script>
     
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
-
     <div class="main">
 <button class="sidebar-button sidebar-toggle">
   <span class="icon-menu" aria-hidden="true"></span>
@@ -30,17 +23,14 @@
 </button>
 <section class="sidebar">
 
-  
   <a href="https://github.com/smashedtoatoms/the_fuzz" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        TheFuzz
-      </h1>
+TheFuzz      </h1>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
-    
   </a>
 
   <form class="sidebar-search" action="search.html">
@@ -53,13 +43,9 @@
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
 
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -71,25 +57,20 @@
 
 
       <h1>
-        <small class="visible-xs">TheFuzz v0.4.0</small>
-        TheFuzz.Similarity.WeightedLevenshtein
-        
+        <small class="visible-xs">TheFuzz v0.5.0</small>
+TheFuzz.Similarity.WeightedLevenshtein        
           <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/weighted_levenshtein.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
-        
       </h1>
 
-      
+
         <section id="moduledoc">
-          <p>This module contains function to calculate the weighted levenshtein distance 
+<p>This module contains function to calculate the weighted levenshtein distance
 between 2 given strings.</p>
-
         </section>
-      
 
-      
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
@@ -98,135 +79,102 @@ between 2 given strings.</p>
             </a>
             Summary
           </h1>
-          
-
-          
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#compare/2">compare(a, b)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Calculates the weighted levenshtein distance between the given strings with 
+    <div class="summary-synopsis"><p>Calculates the weighted levenshtein distance between the given strings with
 the costs of insert, delete, replace as 1</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#compare/3">compare(a, b, weights)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Calculates the weighted levenshtein distance between the given strings with 
+    <div class="summary-synopsis"><p>Calculates the weighted levenshtein distance between the given strings with
 costs for insert, delete and replace provided as a Map in the third argument</p>
 </div>
-  
 </div>
-
   </div>
-
-
-          
-
         </section>
-      
 
-      
-
-      
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Functions
-          </h1>
-          <div class="detail" id="compare/2">
-  
-  
-  <div class="detail-header">
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="compare/2">
+    <div class="detail-header">
     <a href="#compare/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">compare(a, b)</span>
-    
-      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/weighted_levenshtein.ex#L25" class="view-source" rel="help" title="View Source">
+    <h1 class="signature">compare(a, b)</span>
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/weighted_levenshtein.ex#L26" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Calculates the weighted levenshtein distance between the given strings with 
+<p>Calculates the weighted levenshtein distance between the given strings with
 the costs of insert, delete, replace as 1.</p>
 <h2 id="compare/2-examples" class="section-heading">
   <a href="#compare/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; TheFuzz.Similarity.WeightedLevenshtein.compare(&quot;kitten&quot;, &quot;sitting&quot;)
-3
-iex&gt; TheFuzz.Similarity.WeightedLevenshtein.compare(&quot;sunday&quot;, &quot;saturday&quot;)
-3 </code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.WeightedLevenshtein</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="1499326833-1">(</span><span class="s">&quot;kitten&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sitting&quot;</span><span class="p" data-group-id="1499326833-1">)</span><span class="w">
+</span><span class="mi">3</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.WeightedLevenshtein</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="1499326833-2">(</span><span class="s">&quot;sunday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;saturday&quot;</span><span class="p" data-group-id="1499326833-2">)</span><span class="w">
+</span><span class="mi">3</span></code></pre>
   </section>
-</div>
-<div class="detail" id="compare/3">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="compare/3">
+    <div class="detail-header">
     <a href="#compare/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">compare(a, b, weights)</span>
-    
-      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/weighted_levenshtein.ex#L46" class="view-source" rel="help" title="View Source">
+    <h1 class="signature">compare(a, b, weights)</span>
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/master/lib/the_fuzz/similarity/weighted_levenshtein.ex#L49" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Calculates the weighted levenshtein distance between the given strings with 
+<p>Calculates the weighted levenshtein distance between the given strings with
 costs for insert, delete and replace provided as a Map in the third argument.</p>
 <h2 id="compare/3-examples" class="section-heading">
   <a href="#compare/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; weights = %{delete: 10, insert: 0.1, replace: 1}
-iex&gt; TheFuzz.Similarity.WeightedLevenshtein.compare(&quot;book&quot;, &quot;back&quot;, weights)
-2
-iex&gt; weights = %{delete: 10, insert: 1, replace: 1}
-iex&gt; TheFuzz.Similarity.WeightedLevenshtein.compare(&quot;clms blvd&quot;, &quot;columbus boulevard&quot;, weights)
-9</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">weights</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="9718358186-1">%{</span><span class="ss">delete</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="ss">insert</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="ss">replace</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="9718358186-1">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.WeightedLevenshtein</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="9718358186-2">(</span><span class="s">&quot;book&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;back&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">weights</span><span class="p" data-group-id="9718358186-2">)</span><span class="w">
+</span><span class="mi">2</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="n">weights</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="9718358186-3">%{</span><span class="ss">delete</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="ss">insert</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">replace</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="9718358186-3">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.WeightedLevenshtein</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="9718358186-4">(</span><span class="s">&quot;clms blvd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;columbus boulevard&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">weights</span><span class="p" data-group-id="9718358186-4">)</span><span class="w">
+</span><span class="mi">9</span></code></pre>
   </section>
-</div>
-
+</section>
+          </div>
         </section>
-      
-
-      
           <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.2),
           </span>
           <span class="line">
             designed by
-            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
       </footer>
@@ -234,10 +182,7 @@ iex&gt; TheFuzz.Similarity.WeightedLevenshtein.compare(&quot;clms blvd&quot;, &q
   </div>
 </section>
 </div>
-  <script src="dist/app-9bd040e5e5.js"></script>
-  
-  
-  
+  <script src="dist/html-c1666276880c0f8e3769.js"></script>
   
   </body>
 </html>

@@ -4,8 +4,8 @@ defmodule TheFuzz.Mixfile do
   def project do
     [
       app: :the_fuzz,
-      version: "0.4.0",
-      elixir: "~> 1.6",
+      version: "0.5.0",
+      elixir: "~> 1.7",
       name: "TheFuzz",
       source_url: "https://github.com/smashedtoatoms/the_fuzz",
       homepage_url: "https://github.com/smashedtoatoms/the_fuzz",
