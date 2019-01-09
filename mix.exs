@@ -33,9 +33,9 @@ defmodule TheFuzz.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:earmark, "~> 1.2", only: :dev},
-      {:ex_doc, "~> 0.18", only: :dev},
-      {:dogma, "~> 0.1", only: :dev}
+      {:earmark, "~> 1.3", only: :dev},
+      {:ex_doc, "~> 0.19", only: :dev},
+      {:credo, "~> 1.0", only: :dev}
     ]
   end
 
