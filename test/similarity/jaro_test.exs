@@ -33,9 +33,9 @@ defmodule JaroTest do
     assert compare("henka", "henkan") == 0.9444444444444445
     assert compare("fvie", "ten") == 0
 
-    assert compare("zac ephron", "zac efron") >
-      compare("zac ephron", "kai ephron")
+    assert compare("zac ephron", "zac efron") > compare("zac ephron", "kai ephron")
+
     assert compare("brittney spears", "britney spears") >
-      compare("brittney spears", "brittney startzman")
+             compare("brittney spears", "brittney startzman")
   end
 end

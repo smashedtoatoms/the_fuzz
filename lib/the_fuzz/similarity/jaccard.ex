@@ -1,7 +1,7 @@
 defmodule TheFuzz.Similarity.Jaccard do
   @moduledoc """
-  This module contains functions to calculate the [Jaccard similarity 
-  coefficient](https://en.wikipedia.org/wiki/Jaccard_index) between two given 
+  This module contains functions to calculate the [Jaccard similarity
+  coefficient](https://en.wikipedia.org/wiki/Jaccard_index) between two given
   strings
   """
   import TheFuzz.Util, only: [ngram_tokenize: 2, intersect: 2]
@@ -33,13 +33,15 @@ defmodule TheFuzz.Similarity.Jaccard do
       iex> TheFuzz.Similarity.Jaccard.compare("contact", "context", 1)
       0.5555555555555556
   """
-  def compare(a, b, n) when n <= 0 or byte_size(a) < n
-    or byte_size(b) < n, do: nil
+  def compare(a, b, n) when n <= 0 or byte_size(a) < n or byte_size(b) < n,
+    do: nil
+
   def compare(a, b, _n) when a == b, do: 1
+
   def compare(a, b, ngram_size) do
     a_ngrams = a |> ngram_tokenize(ngram_size)
     b_ngrams = b |> ngram_tokenize(ngram_size)
     nmatches = intersect(a_ngrams, b_ngrams) |> length
-    (nmatches)/(length(a_ngrams) + length(b_ngrams) - nmatches)
+    nmatches / (length(a_ngrams) + length(b_ngrams) - nmatches)
   end
 end

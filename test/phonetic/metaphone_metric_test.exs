@@ -9,7 +9,7 @@ defmodule MetaphoneMetricTest do
     assert compare("", "xyz") == nil
   end
 
-  test "returns nil with non-phonetic argumetns" do
+  test "returns nil with non-phonetic arguments" do
     assert compare("123", "123") == nil
     assert compare("123", "") == nil
     assert compare("", "123") == nil

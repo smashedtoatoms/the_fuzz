@@ -8,22 +8,27 @@ defmodule TheFuzz.Similarity.Overlap do
   @behaviour TheFuzz.StringMetric
 
   @doc """
-  Compares two values using the Overlap Similarity metric and returns the 
+  Compares two values using the Overlap Similarity metric and returns the
   coefficient.  It takes the ngram size as the third argument, and, if
   none is provided, assumes that you want to use 1.
   ## Examples
       iex> TheFuzz.Similarity.Overlap.compare("compare me", "to me")
       0.8
-      TheFuzz.Similarity.Overlap.compare("compare me", "to me", 2)
-      0.8
+      iex> TheFuzz.Similarity.Overlap.compare("compare me", "to me", 2)
+      0.5
       iex> TheFuzz.Similarity.Overlap.compare("or me", "me", 1)
       1.0
   """
   def compare(a, b), do: compare(a, b, 1)
+
   def compare(a, b, n) do
     cond do
-      n <= 0 || String.length(a) < n || String.length(b) < n -> nil
-      a == b -> 1.0
+      n <= 0 || String.length(a) < n || String.length(b) < n ->
+        nil
+
+      a == b ->
+        1.0
+
       true ->
         tokens_a = ngram_tokenize(a, n)
         tokens_b = ngram_tokenize(b, n)

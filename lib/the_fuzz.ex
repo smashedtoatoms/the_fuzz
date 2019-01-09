@@ -3,11 +3,11 @@ defmodule TheFuzz do
   Contains shortforms to execute different string metric algorithms to compare 
   given strings.
   """
-  @spec compare(atom, String.t, String.t) :: number
+  @spec compare(atom, String.t(), String.t()) :: number
 
   @doc """
   Compares given strings using the corresponding string metric algorithm.
-  
+
   Available metric types are:
   - Sorensen Dice coefficient: **:dice_sorensen**
   - Hamming distance: **:hamming**
@@ -24,6 +24,7 @@ defmodule TheFuzz do
   they might need like n gram size in case of Jaccard
   """
   def compare(metric_type, a, b)
+
   def compare(:dice_sorensen, a, b) do
     TheFuzz.Similarity.DiceSorensen.compare(a, b)
   end
@@ -79,6 +80,7 @@ defmodule TheFuzz do
   - Weighted Levenshtein distance: **:weighted_levenshtein**
   """
   def compare(metric_type, a, b, opts)
+
   def compare(:dice_sorensen, a, b, n) do
     TheFuzz.Similarity.DiceSorensen.compare(a, b, n)
   end

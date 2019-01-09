@@ -24,6 +24,7 @@ defmodule TheFuzz.Similarity.Jaro do
   def compare(string1, string2) do
     string1_length = String.length(string1)
     string2_length = String.length(string2)
+
     cond do
       string1_length == 0 or string2_length == 0 -> nil
       true -> String.jaro_distance(string1, string2)

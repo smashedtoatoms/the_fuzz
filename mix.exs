@@ -2,15 +2,17 @@ defmodule TheFuzz.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :the_fuzz,
-     version: "0.4.0",
-     elixir: "~> 1.6",
-     name: "TheFuzz",
-     source_url: "https://github.com/smashedtoatoms/the_fuzz",
-     homepage_url: "https://github.com/smashedtoatoms/the_fuzz",
-     description: description(),
-     package: package(),
-     deps: deps()]
+    [
+      app: :the_fuzz,
+      version: "0.4.0",
+      elixir: "~> 1.6",
+      name: "TheFuzz",
+      source_url: "https://github.com/smashedtoatoms/the_fuzz",
+      homepage_url: "https://github.com/smashedtoatoms/the_fuzz",
+      description: description(),
+      package: package(),
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
@@ -31,9 +33,9 @@ defmodule TheFuzz.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:earmark, "~> 1.2", only: :dev},
-      {:ex_doc, "~> 0.18", only: :dev},
-      {:dogma, "~> 0.1", only: :dev}
+      {:earmark, "~> 1.3", only: :dev},
+      {:ex_doc, "~> 0.19", only: :dev},
+      {:credo, "~> 1.0", only: :dev}
     ]
   end
 
