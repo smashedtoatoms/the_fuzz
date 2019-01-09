@@ -21,17 +21,23 @@ defmodule TheFuzz.Similarity.JaroWinkler do
     alias TheFuzz.Similarity.Jaro, as: Jaro
     string1_length = String.length(string1)
     string2_length = String.length(string2)
+
     cond do
-      string1_length == 0 or string2_length == 0 -> nil
-      string1 == string2 -> 1.0
+      string1_length == 0 or string2_length == 0 ->
+        nil
+
+      string1 == string2 ->
+        1.0
+
       string1_length > string2_length ->
         score = Jaro.compare(string2, string1)
         modified_prefix = modify_prefix(string2, string1)
-        score + ((modified_prefix * (1 - score)) / 10)
+        score + modified_prefix * (1 - score) / 10
+
       true ->
         score = Jaro.compare(string1, string2)
         modified_prefix = modify_prefix(string1, string2)
-        score + ((modified_prefix * (1 - score)) / 10)
+        score + modified_prefix * (1 - score) / 10
     end
   end
 
@@ -44,11 +50,13 @@ defmodule TheFuzz.Similarity.JaroWinkler do
   defp modify_prefix(s1, s2) do
     modify_prefix(s1, s2, 0, Enum.min([4, String.length(s1)]))
   end
+
   defp modify_prefix(s1, s2, prefix_length, last_character) do
     cond do
       prefix_length < last_character &&
           String.at(s1, prefix_length) == String.at(s2, prefix_length) ->
-        modify_prefix(s1, s2, prefix_length+1, last_character)
+        modify_prefix(s1, s2, prefix_length + 1, last_character)
+
       true ->
         prefix_length
     end
