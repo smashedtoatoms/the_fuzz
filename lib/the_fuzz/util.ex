@@ -59,27 +59,7 @@ defmodule TheFuzz.Util do
     intersect(String.codepoints(l1), String.codepoints(l2))
   end
 
-  def intersect(l1, l2), do: intersect(l1, l2, length(l1), length(l2), [])
-  defp intersect(_, _, s1, s2, acc) when s1 == 0 or s2 == 0, do: acc
-
-  defp intersect(l1, l2, s1, s2, acc) do
-    cond do
-      hd(l1) == hd(l2) ->
-        intersect(tl(l1), tl(l2), s1 - 1, s2 - 1, acc ++ [hd(l2)])
-
-      Enum.find_index(l1, &(&1 == hd(l2))) == nil ->
-        intersect(l1, tl(l2), s1, s2 - 1, acc)
-
-      true ->
-        cond do
-          max(s1, s2) == s1 ->
-            intersect(tl(l1), l2, s1 - 1, s2, acc)
-
-          true ->
-            intersect(l1, tl(l2), s1, s2 - 1, acc)
-        end
-    end
-  end
+  def intersect(l1, l2), do: l1 -- (l1 -- l2)
 
   @doc """
   [ngram tokenizes](http://en.wikipedia.org/wiki/N-gram) the string provided.
