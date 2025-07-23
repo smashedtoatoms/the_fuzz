@@ -2,6 +2,7 @@ defmodule DocTest do
   use ExUnit.Case
   doctest TheFuzz.Phonetic.MetaphoneAlgorithm
   doctest TheFuzz.Phonetic.MetaphoneMetric
+  doctest TheFuzz.Similarity.DamerauLevenshtein
   doctest TheFuzz.Similarity.DiceSorensen
   doctest TheFuzz.Similarity.Hamming
   doctest TheFuzz.Similarity.Jaccard

@@ -13,6 +13,7 @@ The following algorithms are currently implemented.
 1. JaroMetric
 1. JaroWinklerMetric
 1. LevenshteinDistance
+1. DamerauLevenshteinDistance
 1. NGramSimilarityMetric
 1. OverlapMetric
 1. TanimotoCoefficientMetric

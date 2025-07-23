@@ -9,6 +9,7 @@ defmodule TheFuzz do
   Compares given strings using the corresponding string metric algorithm.
 
   Available metric types are:
+  - Damerau-Levenshtein distance: **:damerau_levenshtein**
   - Sorensen Dice coefficient: **:dice_sorensen**
   - Hamming distance: **:hamming**
   - Jaccard Similarity coefficient: **:jaccard**
@@ -24,6 +25,10 @@ defmodule TheFuzz do
   they might need like n gram size in case of Jaccard
   """
   def compare(metric_type, a, b)
+
+  def compare(:damerau_levenshtein, a, b) do
+    TheFuzz.Similarity.DamerauLevenshtein.compare(a, b)
+  end
 
   def compare(:dice_sorensen, a, b) do
     TheFuzz.Similarity.DiceSorensen.compare(a, b)
