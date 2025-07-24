@@ -50,8 +50,8 @@ defmodule TheFuzz.Util do
   Finds the intersection of two lists.  If Strings are provided, it uses the
   codepoints of said string.
   ## Example
-      iex> TheFuzz.Util.intersect('context', 'contentcontent')
-      'contet'
+      iex> TheFuzz.Util.intersect(~c"context", ~c"contentcontent")
+      ~c"contet"
       iex> TheFuzz.Util.intersect("context", "contentcontent")
       ["c", "o", "n", "t", "e", "t"]
   """

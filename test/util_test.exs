@@ -4,8 +4,8 @@ defmodule UtilTest do
   import TheFuzz.Util, only: [ngram_tokenize: 2, intersect: 2]
 
   test "intersect" do
-    assert Enum.sort(intersect('content', 'contextcontext')) == 'cennott' 
-    assert Enum.sort(intersect('contextcontext', 'content')) == 'cennott'
+    assert Enum.sort(intersect(~c"content", ~c"contextcontext")) == ~c"cennott"
+    assert Enum.sort(intersect(~c"contextcontext", ~c"content")) == ~c"cennott"
   end
 
   test "ngram_tokenize empty string" do

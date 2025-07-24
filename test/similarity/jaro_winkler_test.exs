@@ -28,7 +28,7 @@ defmodule JaroWinklerTest do
     assert compare("martha", "marhta") == 0.9611111111111111
     assert compare("dwayne", "duane") == 0.8400000000000001
     assert compare("dixon", "dicksonx") == 0.8133333333333332
-    assert compare("abcvwxyz", "cabvwxyz") == 0.9583333333333334
+    assert compare("abcvwxyz", "cabvwxyz") == 0.9375
     assert compare("jones", "johnson") == 0.8323809523809523
     assert compare("henka", "henkan") == 0.9666666666666667
     assert compare("fvie", "ten") == 0

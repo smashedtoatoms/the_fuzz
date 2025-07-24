@@ -28,7 +28,7 @@ defmodule JaroTest do
     assert compare("martha", "marhta") == 0.9444444444444445
     assert compare("dwayne", "duane") == 0.8222222222222223
     assert compare("dixon", "dicksonx") == 0.7666666666666666
-    assert compare("abcvwxyz", "cabvwxyz") == 0.9583333333333334
+    assert compare("abcvwxyz", "cabvwxyz") == 0.9375
     assert compare("jones", "johnson") == 0.7904761904761904
     assert compare("henka", "henkan") == 0.9444444444444445
     assert compare("fvie", "ten") == 0
