@@ -8,9 +8,7 @@
     <meta name="project" content="TheFuzz v0.6.0">
 
 
-      <meta name="robots" content="noindex">
-
-    <title>404 — TheFuzz v0.6.0</title>
+    <title>TheFuzz.Similarity.DamerauLevenshtein — TheFuzz v0.6.0</title>
 
     <link rel="stylesheet" href="dist/html-elixir-KV3YOVJ3.css" />
 
@@ -49,7 +47,7 @@ TheFuzz
 
 <output role="status" id="toast"></output>
 
-<main class="content page-extra" id="main" data-type="extras">
+<main class="content page-module" id="main" data-type="modules">
   <div id="content" class="content-inner">
     <div class="top-search">
       <div class="search-settings">
@@ -74,16 +72,93 @@ TheFuzz
       </div>
     </div>
 
-<h1>
-  <span>Page not found</span>
-</h1>
+<div id="top-content">
+  <div class="heading-with-actions top-heading">
+    <h1>
+      <span translate="no">TheFuzz.Similarity.DamerauLevenshtein</span> 
+      <small class="app-vsn" translate="no">(TheFuzz v0.6.0)</small>
 
-<p>Sorry, but the page you were trying to get to, does not exist. You
-may want to try searching this site using the sidebar
+    </h1>
 
-  or using our <a href="api-reference.html">API Reference</a> page
+      <a href="https://github.com/smashedtoatoms/the_fuzz/blob/main/lib/the_fuzz/similarity/damerau_levenshtein.ex#L1" title="View Source" class="icon-action" rel="help">
+        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        <span class="sr-only">View Source</span>
+      </a>
 
-to find what you were looking for.</p>
+  </div>
+
+
+    <section id="moduledoc">
+<p>This module contains functions to calculate the Damerau-Levenshtein distance between
+given strings.</p>
+    </section>
+
+</div>
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Summary</span>
+    </h1>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#compare/2" data-no-tooltip="" translate="no">compare(a, b)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Calculates the Damerau-Levenshtein distance between two given strings.</p></div>
+
+    </div>
+
+</div>
+
+  </section>
+
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Functions</span>
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="compare/2">
+
+  <div class="detail-header">
+    <a href="#compare/2" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">compare(a, b)</h1>
+
+
+        <a href="https://github.com/smashedtoatoms/the_fuzz/blob/main/lib/the_fuzz/similarity/damerau_levenshtein.ex#L17" class="icon-action" rel="help" aria-label="View Source">
+          <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        </a>
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Calculates the Damerau-Levenshtein distance between two given strings.</p><h2 id="compare/2-examples" class="section-heading"><a href="#compare/2-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.DamerauLevenshtein</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="9081749926-1">(</span><span class="s">&quot;saturday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sunday&quot;</span><span class="p" data-group-id="9081749926-1">)</span><span class="w">
+</span><span class="mi">3</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.DamerauLevenshtein</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="9081749926-2">(</span><span class="s">&quot;fuor&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;four&quot;</span><span class="p" data-group-id="9081749926-2">)</span><span class="w">
+</span><span class="mi">1</span></code></pre>
+  </section>
+</section>
+
+    </div>
+  </section>
+
     <footer class="footer">
       <p>
 
