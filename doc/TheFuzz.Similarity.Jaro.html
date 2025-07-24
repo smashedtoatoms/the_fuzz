@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="dist/html-elixir-KV3YOVJ3.css" />
 
-    <script defer src="dist/sidebar_items-DB003087.js"></script>
+    <script defer src="dist/sidebar_items-FCC7C6DA.js"></script>
     <script defer src="docs_config.js"></script>
     <script defer src="dist/html-DPJLHKSM.js"></script>
 
@@ -155,13 +155,13 @@ to preserve backwards compatibility with this library's original code.</p></div>
 <p>Calculates the Jaro distance between two strings.  This used to be
 implemented here, but since Elixir 1.1, Jaro is part of the standard lib.
 This now uses the std lib call, but returns nil if either string is empty
-to preserve backwards compatibility with this library's original code.</p><h2 id="compare/2-examples" class="section-heading"><a href="#compare/2-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaro</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="9555620420-1">(</span><span class="s">&quot;abc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p" data-group-id="9555620420-1">)</span><span class="w">
+to preserve backwards compatibility with this library's original code.</p><h2 id="compare/2-examples" class="section-heading"><a href="#compare/2-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaro</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="8815776583-1">(</span><span class="s">&quot;abc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p" data-group-id="8815776583-1">)</span><span class="w">
 </span><span class="no">nil</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaro</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="9555620420-2">(</span><span class="s">&quot;abc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;xyz&quot;</span><span class="p" data-group-id="9555620420-2">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaro</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="8815776583-2">(</span><span class="s">&quot;abc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;xyz&quot;</span><span class="p" data-group-id="8815776583-2">)</span><span class="w">
 </span><span class="mf">0.0</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaro</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="9555620420-3">(</span><span class="s">&quot;compare me&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;compare me&quot;</span><span class="p" data-group-id="9555620420-3">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaro</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="8815776583-3">(</span><span class="s">&quot;compare me&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;compare me&quot;</span><span class="p" data-group-id="8815776583-3">)</span><span class="w">
 </span><span class="mf">1.0</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaro</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="9555620420-4">(</span><span class="s">&quot;natural&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;nothing&quot;</span><span class="p" data-group-id="9555620420-4">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">TheFuzz.Similarity.Jaro</span><span class="o">.</span><span class="n">compare</span><span class="p" data-group-id="8815776583-4">(</span><span class="s">&quot;natural&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;nothing&quot;</span><span class="p" data-group-id="8815776583-4">)</span><span class="w">
 </span><span class="mf">0.5238095238095238</span></code></pre>
   </section>
 </section>
